@@ -1,0 +1,16 @@
+header {
+    background-color: tomato;
+    position: fixed;
+    height: 10vh;
+    display: flex;
+    width: 100%;
+    padding: 120px;
+
+}
+
+.logo-header {
+    max-height: 10vh;
+}
+.about{
+    margin-top: 600px;
+}

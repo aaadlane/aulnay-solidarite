@@ -1,0 +1,34 @@
+import React from 'react';
+import "./styles/App.css";
+import HeaderMain from "./components/Layout/HeaderMain";
+import FooterMain from "./components/Layout/FooterMain";
+import { Switch, Route } from "react-router-dom";
+
+//pages
+import Home from "./components/page/Home";
+import About from "./components/page/About";
+import Contact from "./components/page/Contact";
+import Annonce from "./components/page/Annonce";
+import NotFound from "./components/page/NotFound";
+
+
+
+function App() {
+  return (
+    <div className="App">
+      <HeaderMain/>
+      <main>
+      <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/annonce/:id" component={Annonce} />
+          <Route path="*" component={NotFound} />
+        </Switch>
+      </main>
+      <FooterMain/>
+    </div>
+  );
+}
+
+export default App;
