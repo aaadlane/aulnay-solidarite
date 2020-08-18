@@ -15,8 +15,8 @@ const userSchema = new Schema({
         district: String,
     },
     Profile_type: {
-        User: Boolean,
-        Associations: Boolean,
+        user: Boolean,
+        association: Boolean,
     },
     gender: {
         type: String,

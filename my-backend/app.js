@@ -8,9 +8,19 @@ const MongoStore = require("connect-mongo")(session);
 const cors = require("cors");
 const morgan = require("morgan"); // morgan est un logger
 const app = express();
+var cookieParser = require('cookie-parser');
+
+app.use(cookieParser());
+var logger = require('morgan');
+
+app.use(logger('dev'));
+
 
 // POST SETUP
 app.use(express.json());
+app.use(express.urlencoded({
+  extended: false
+}));
 
 // CORS SETUP
 app.use(cors("*"));
@@ -32,11 +42,14 @@ app.use(
   })
 );
 
-app.get("/", (req, res) => res.send("hello :) my api is working"));
+app.get("/", (req, res) => res.send(`"hello :) my api is working on port${process.env.PORT}"`));
 
-// app.use("/api/products", require("./routes/api.products"));
-// app.use("/api/heroes", require("./routes/api.heroes"));
-// app.use("/api/users", require("./routes/api.users"));
+app.use("/user", require("./routes/user"));
+app.use("/annonce", require("./routes/annonce"));
+app.use("/associations", require("./routes/associations.js"));
+app.use("/categories", require("./routes/categories"));
+app.use("/messagerie", require("./routes/messagerie"));
+
 
 
 module.exports = app;

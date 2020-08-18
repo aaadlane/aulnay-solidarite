@@ -3,19 +3,24 @@ const Schema = mongoose.Schema;
 
 const annonceSchema = new Schema({
     id_user: {
-        type: Schema.types.ObjectId
+        type: Schema.Types.ObjectId,
+        ref: "User",
     },
-    name: String,
-    email: String,
-    adress: {
-        street: String,
-        street_number: Number,
-        district: String,
-        zip_code: Number,
-        city: String,
+    id_category: {
+        type: Schema.Types.ObjectId,
+        ref: "Categories",
     },
+    title: String,
+    description: String,
+    picture: String,
+    timestamps: {
+        createdAt: Date,
+        updatedAt: Date
+    },
+    active : Boolean,
+
 });
 
-const AnnonceModel = mongoose.model("User", annonceSchema);
+const AnnonceModel = mongoose.model("Annonce", annonceSchema);
 
 module.exports = AnnonceModel;

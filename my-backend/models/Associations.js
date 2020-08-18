@@ -3,7 +3,8 @@ const Schema = mongoose.Schema;
 
 const associationSchema = new Schema({
     id_user: {
-        type: Schema.types.ObjectId
+        type: Schema.Types.ObjectId,
+        ref: "User"
     },
     name: String,
     email: String,
@@ -16,6 +17,6 @@ const associationSchema = new Schema({
     },
 });
 
-const AssociationModel = mongoose.model("User", associationSchema);
+const AssociationModel = mongoose.model("Associations", associationSchema);
 
 module.exports = AssociationModel;
