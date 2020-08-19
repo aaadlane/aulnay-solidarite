@@ -8,6 +8,7 @@ const associationSchema = new Schema({
     },
     name: String,
     email: String,
+    picture: String,
     adress: {
         street: String,
         street_number: Number,

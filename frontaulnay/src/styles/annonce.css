@@ -1,0 +1,26 @@
+/* Version PC */
+@media only screen and (min-width : 1025px) {
+    .annonce {
+        padding-top: 124px;
+    }
+}
+
+
+/* Version Tablette */
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+    .annonce {
+        padding-top: 124px;
+    }
+}
+
+/* Version Mobile */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .annonce {
+        padding-top: 124px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+        align-items: stretch;
+    }
+
+}

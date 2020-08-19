@@ -1,4 +1,13 @@
 @import url('./header.css');
+@import url('./footer.css');
+@import url('./about.css');
+@import url('./annonce.css');
+@import url('./associations.css');
+@import url('./contact.css');
+@import url('./home.css');
+@import url('./annonce-card.css');
+@import url('./associations-card.css');
+@import url('./vars.css');
 
 
 * {
@@ -7,3 +16,4 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 };
+

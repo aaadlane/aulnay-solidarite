@@ -1,6 +1,6 @@
+/* Version PC */
 header {
     position: fixed;
-    z-index: 100;
     height: 10vh;
     min-height: 124px;
     width: 100%;
@@ -11,9 +11,51 @@ header {
     max-height: 90px;
 }
 
-.header-links {
+header ul {
     list-style: none;
     color: burlywood;
     text-decoration: none;
+}
 
+.nav-links {
+    flex-direction: row;
+    float: right;
+    padding: 50px 60px 30px 0;
+}
+
+.nav-links>li {
+    color: white;
+    height: 3vh;
+    display: inline-block;
+    margin-right: 25px;
+}
+
+.nav-links>li>a {
+    color: burlywood;
+    text-decoration: none;
+}
+
+/* Version Tablette */
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+    header {
+        background-color: dodgerblue;
+    }
+}
+
+/* Version smartphone */
+    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    header {
+        background-color: pink;
+    }
+
+    header ul {
+       visibility: hidden;
+    }
+
+    .logo-header {
+        max-height: 90px;
+        display: block;
+   margin: auto;
+   vertical-align: middle;
+    }
 }

@@ -1,10 +1,26 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import AnnonceCard from "./../ComponentsCards/AnnonceCard"
+
 
 export default class Annonce extends Component {
     render() {
         return (
-            <div>
-                <h1>Annonce</h1>
+            <div className="annonce">
+                <AnnonceCard/>
+                <AnnonceCard/>
+                <AnnonceCard/>
+                <AnnonceCard/>
+                <AnnonceCard/>
+                <AnnonceCard/>
+                <AnnonceCard/>
+                <AnnonceCard/>
+                <AnnonceCard/>
+                <AnnonceCard/>
+                <AnnonceCard/>
+                <AnnonceCard/>
+                <AnnonceCard/>
+                <AnnonceCard/>
+                <AnnonceCard/>
             </div>
         )
     }

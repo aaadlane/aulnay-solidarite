@@ -1,0 +1,30 @@
+.block-one-texte {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.home{
+    background-color: yellow
+}
+/* Version PC */
+@media only screen and (min-width : 1025px) {
+    .home {
+        padding-top: 124px;
+    }
+}
+
+/* Version Tablette */
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+    .home {
+        padding-top: 124px;
+    }
+}
+
+/* Version Mobile */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .home {
+        padding-top: 124px;
+    }
+}
