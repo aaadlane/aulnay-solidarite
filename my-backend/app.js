@@ -16,7 +16,6 @@ var logger = require('morgan');
 app.use(logger('dev'));
 
 
-// POST SETUP
 app.use(express.json());
 app.use(express.urlencoded({
   extended: false

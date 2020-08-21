@@ -7,6 +7,10 @@ header {
     background-color: black;
 }
 
+.header {
+    margin-bottom: 124px
+}
+
 .logo-header {
     max-height: 90px;
 }
@@ -43,19 +47,18 @@ header ul {
 }
 
 /* Version smartphone */
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     header {
         background-color: pink;
     }
 
     header ul {
-       visibility: hidden;
+        visibility: hidden;
     }
 
     .logo-header {
         max-height: 90px;
         display: block;
-   margin: auto;
-   vertical-align: middle;
+        margin: auto;
     }
 }

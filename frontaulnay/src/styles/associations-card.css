@@ -1,9 +1,21 @@
 /* Version PC */
-@media only screen and (min-width : 1025px) {}
+@media only screen and (min-width : 1025px) {
+   
+    .association-img {
+        width: 200px;
+        height: 130px;
+    }
+}
 
 
 /* Version Tablette */
-@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {}
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+   
+    .association-img {
+        width: 200px;
+        height: 130px;
+    }
+}
 
 /* Version Mobile */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {

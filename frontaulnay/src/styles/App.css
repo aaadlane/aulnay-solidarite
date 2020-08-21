@@ -8,6 +8,10 @@
 @import url('./annonce-card.css');
 @import url('./associations-card.css');
 @import url('./vars.css');
+@import url('./DashBoard-Style/dashboard.css');
+@import url('./DashBoard-Style/messagerie.css');
+@import url('./DashBoard-Style/manageannounce.css');
+@import url('./DashBoard-Style/editprofile.css');
 
 
 * {

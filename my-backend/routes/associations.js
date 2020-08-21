@@ -3,7 +3,7 @@ const AssociationModel = require("../models/Associations");
 
 router.get("/", async (req, res, next) => {
     try {
-        const association = await AssociationModel.find();
+        const association = await AssociationModel.find().populate("id_user");
         res.json(association);
     } catch (err) {
         next(err);
