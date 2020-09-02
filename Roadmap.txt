@@ -1,0 +1,6 @@
+Faire les categories ajouter annonce / créer une association
+ajouter la validation par le moderatuer pour valider que c'est une association
+ajouter modification utilisateurs
+ajouter créer un utilisateurs
+modifier un utilisateur
+

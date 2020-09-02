@@ -1,5 +1,5 @@
 import React from 'react';
-import LinkLogin from "./../LinkLogin";
+// import LinkLogin from "./../LinkLogin";
 import { NavLink } from "react-router-dom";
 
 
@@ -17,7 +17,7 @@ export default function HeaderMain() {
                     <li><NavLink to="/annonces">Annonces</NavLink></li>
                     <li><NavLink to="/associations">Associations</NavLink></li>
                     <li><NavLink to="/dashboard">Dashboard</NavLink></li>
-                    <li><NavLink to="/login"><LinkLogin /></NavLink></li>
+                    <li><NavLink to="/login">Se Connecter</NavLink></li>
                 </ul>
             </header>
         </div>

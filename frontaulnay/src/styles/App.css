@@ -12,6 +12,8 @@
 @import url('./DashBoard-Style/messagerie.css');
 @import url('./DashBoard-Style/manageannounce.css');
 @import url('./DashBoard-Style/editprofile.css');
+@import url('./LoginSignup/loginpagesignin.css');
+@import url('./LoginSignup/signup.css');
 
 
 * {

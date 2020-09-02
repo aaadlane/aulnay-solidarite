@@ -17,13 +17,11 @@ export class APIHandler {
   }
 
   getAll() {
-    return this.instance.get("/"); // retourne une Promesse
-    // return axios.get("http://localhost:8888/api/products")
+    return this.instance.get("/"); 
   }
 
   getById(id) {
     return this.instance.get("/" + id);
-    // return axios.get("http://localhost:8888/api/products/${id}")
   }
 
   deleteOne(id) {
