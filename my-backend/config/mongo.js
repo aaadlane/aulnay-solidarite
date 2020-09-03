@@ -5,8 +5,8 @@ mongoose.connect(process.env.MONGO_URI, {
   useCreateIndex: true,
   useUnifiedTopology: true,
   useFindAndModify: false,
+  
 });
-
 mongoose.connection.on("connected", () =>
   console.log("yay mongodb connected :)")
 );

@@ -37,6 +37,7 @@ router.patch("/:id", async (req, res, next) => {
                 new: true
             }
         );
+        console.log(updateUser)
         res.json(updateUser);
     } catch (err) {
         next(err)

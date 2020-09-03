@@ -19,8 +19,9 @@ export default class Annonce extends Component {
         return (
             <div className="annonce">
                 {annonces.map((annonce, i) => {
-                    return <AnnonceCard annonce={annonce} key={i} />
-                })}
+                    return <AnnonceCard annonce={annonce} key={i} />  })}
+      
+              
             </div>
         )
     }
