@@ -3,7 +3,7 @@ import axios from 'axios'
 
 
 export default class EditProfile extends Component {
-
+ 
     state = {
         first_name: "",
         last_name: '',
@@ -35,6 +35,10 @@ export default class EditProfile extends Component {
                 console.log(error);
             })
     }
+
+componentDidUpdate = () => {
+    console.log("@@@@@@@@@@@",this.state)
+}
 
     onChangeFirstName = (e) => {
         this.setState({
@@ -98,7 +102,12 @@ export default class EditProfile extends Component {
             description: this.state.description
         }
         axios.patch('http://localhost:5555/user/5f4f9f12d0f4e88427b470e1' , {user})
-            .then(res => console.log(res))
+            .then(res => {
+                this.setState({
+                    first_name: res.data.first_name,
+                })
+                console.log(this.state.first_name)
+            })
             .catch ((error) => {
             console.log(error);
         })

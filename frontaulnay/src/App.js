@@ -13,6 +13,7 @@ import NotFound from "./components/page/NotFound";
 import Associations from "./components/page/Associations";
 import Dashboard from "./components/page/Dashboard";
 import Messagerie from "./components/ComponentsDashboard/Messagerie";
+import CreateAnnonce from "./components/ComponentsDashboard/CreateAnnonce";
 import EditProfile from "./components/ComponentsDashboard/EditProfile";
 import ManageAnnounce from "./components/ComponentsDashboard/ManageAnnounce";
 import SignUp from "./components/LoginPage/SignUp";
@@ -37,6 +38,7 @@ function App() {
           <Route path="/manageannounce" component={ManageAnnounce} />
           <Route path="/signup" component={SignUp} />
           <Route path="/login" component={LoginPageSignIn} />
+          <Route path="/createannonce" component={CreateAnnonce} />
           <Route path="*" component={NotFound} />
         </Switch>
       </main>

@@ -12,12 +12,8 @@ const annonceSchema = new Schema({
     },
     title: String,
     description: String,
-    picture: String,
-    timestamps: {
-        createdAt: Date,
-        updatedAt: Date
-    },
-    active : Boolean,
+    createdAt: Date,
+    active: Boolean,
 
 });
 

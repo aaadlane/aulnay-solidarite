@@ -11,6 +11,7 @@ export default class Dashboard extends Component {
                     <Link to="/messagerie">messagerie</Link><br/>
                     <Link to="/manageannounce">manager annonce</Link><br/>
                     <Link to="/editprofile">modifier ses données/profil</Link>
+                    <Link to="/createannonce">créer annonce</Link>
                  
                 </p>
             </div>

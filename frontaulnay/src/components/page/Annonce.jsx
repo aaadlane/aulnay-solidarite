@@ -15,6 +15,7 @@ export default class Annonce extends Component {
 
     render() {
         const annonces = this.state.annonces;
+        console.log("@@@@@@@@",annonces)
 
         return (
             <div className="annonce">
