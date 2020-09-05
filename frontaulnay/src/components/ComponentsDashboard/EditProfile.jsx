@@ -17,7 +17,7 @@ export default class EditProfile extends Component {
     }
 
     async componentDidMount() {
-        await axios.get('http://localhost:5555/user/5f4f9f12d0f4e88427b470e1')
+        await axios.get('http://localhost:5555/user/5f51fad06afc471198d19540')
             .then(response => {
                 this.setState({
                     first_name: response.data.first_name,
@@ -37,7 +37,7 @@ export default class EditProfile extends Component {
     }
 
 componentDidUpdate = () => {
-    console.log("@@@@@@@@@@@",this.state)
+    console.log("component did update",this.state)
 }
 
     onChangeFirstName = (e) => {
@@ -87,7 +87,7 @@ componentDidUpdate = () => {
         });
     }
 
-    onSubmit = (e) => {
+     onSubmit = async (e) => {
         e.preventDefault();
 
         const user = {
@@ -101,12 +101,14 @@ componentDidUpdate = () => {
             password: this.state.password,
             description: this.state.description
         }
-        axios.patch('http://localhost:5555/user/5f4f9f12d0f4e88427b470e1' , {user})
+        console.log('user => ', user)
+        await axios.patch('http://localhost:5555/user/5f51fad06afc471198d19540' , {user})
             .then(res => {
+                console.log('res => ', res.data)
                 this.setState({
                     first_name: res.data.first_name,
                 })
-                console.log(this.state.first_name)
+                console.log("this.state.first_name",this.state.first_name)
             })
             .catch ((error) => {
             console.log(error);

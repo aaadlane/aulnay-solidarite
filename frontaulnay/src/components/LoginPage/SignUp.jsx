@@ -6,7 +6,7 @@ export default class SignUp extends Component {
 
     handleChange = (evt) => {
         this.setState({ [evt.target.name]: evt.target.value });
-
+ 
     };
     handleSubmit = async (evt) => {
         evt.preventDefault();
