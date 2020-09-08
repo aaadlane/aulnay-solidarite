@@ -12,10 +12,10 @@ export default class LoginPageSignIn extends Component {
                 <form className="form">
                     <h1 className="title">connexion</h1>
                     <label htmlFor="price" className="label">Adresse Mail : </label>
-                    <input id="price" name="email" type="email" className="input" required />
+                    <input  name="email" type="email" className="input" required />
                     <br />
                     <label htmlFor="price" className="label">Mot de passe : </label>
-                    <input id="price" name="password" type="password" className="input" minLength="6" required />
+                    <input name="password" type="password" className="input" minLength="6" required />
                     <br />
                     <button className="btn">Se connecter</button>
                 </form>

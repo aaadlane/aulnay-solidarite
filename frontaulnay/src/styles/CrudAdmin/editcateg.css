@@ -1,0 +1,20 @@
+/* Version PC */
+@media only screen and (min-width : 1025px) {
+    .edit-categ {
+        padding-top: 124px;
+    }
+}
+
+/* Version Tablette */
+@media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
+    .edit-categ {
+        padding-top: 124px;
+    }
+}
+
+/* Version Mobile */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .edit-categ {
+        padding-top: 124px;
+    }
+}

@@ -15,7 +15,7 @@ export default function HeaderMain() {
                     <li><NavLink to="/about">About</NavLink></li>
                     <li><NavLink to="/contact">Contact</NavLink></li>
                     <li><NavLink to="/annonces">Annonces</NavLink></li>
-                    <li><NavLink to="/associations">Associations</NavLink></li>
+                    {/* <li><NavLink to="/associations">Associations</NavLink></li> */}
                     <li><NavLink to="/dashboard">Dashboard</NavLink></li>
                     <li><NavLink to="/login">Se Connecter</NavLink></li>
                 </ul>

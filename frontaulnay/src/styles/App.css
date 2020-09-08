@@ -9,12 +9,20 @@
 @import url('./associations-card.css');
 @import url('./vars.css');
 @import url('./DashBoard-Style/dashboard.css');
+@import url('./DashBoard-Style/dashboardadmin.css');
 @import url('./DashBoard-Style/messagerie.css');
 @import url('./DashBoard-Style/createannonce.css');
 @import url('./DashBoard-Style/manageannounce.css');
 @import url('./DashBoard-Style/editprofile.css');
 @import url('./LoginSignup/loginpagesignin.css');
 @import url('./LoginSignup/signup.css');
+@import url('./CrudAdmin/useradmin.css');
+@import url('./CrudAdmin/categorieadmin.css');
+@import url('./CrudAdmin/annonceadmin.css');
+@import url('./CrudAdmin/associationadmin.css');
+@import url('./CrudAdmin/addcateg.css');
+@import url('./CrudAdmin/editcateg.css');
+
 
 
 

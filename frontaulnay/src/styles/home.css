@@ -5,9 +5,27 @@
     text-align: center;
     padding-bottom: 30px;
 }
-.home{
-    background-color: yellow
+
+.home {
+    background-color: var(--bluecolor)
 }
+
+.button-main {
+    background-color: #4CAF50;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.section-one {
+    background-color: var(--yellowcolor)
+}
+
 /* Version PC */
 @media only screen and (min-width : 1025px) {
     .home {
@@ -26,5 +44,20 @@
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .home {
         padding-top: 124px;
+
+    }
+
+    .button-main {
+        background-color: var(--redcolor);
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        width: 65%;
+        margin: 10px auto;
+        height: 70px;
     }
 }

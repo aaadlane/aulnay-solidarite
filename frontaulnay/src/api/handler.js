@@ -8,7 +8,7 @@ export class APIHandler {
       );
 
     this.instance = axios.create({
-      baseURL: process.env.REACT_APP_BACKEND_URL + APIPrefix,
+      baseURL: process.env.REACT_APP_BACKEND_URL + APIPrefix || "",
     });
   }
 
@@ -26,6 +26,9 @@ export class APIHandler {
 
   deleteOne(id) {
     return this.instance.delete("/" + id);
+  }
+  updateOne(id, stateToUpdate){
+    return this.instance.patch("/" + id, stateToUpdate)
   }
 }
 

@@ -18,19 +18,12 @@ export default class CreateAnnonce extends Component {
         console.log("createdat",createdAt);
         const active = this.state.active;
         console.log("active",active);
-        const categorie = 
         // faire une condition si categorie name = celui de la value alors renvoie categorie.id
 
-        axios.post("http://localhost:5555/annonce", { title, description, createdAt,active ,categorie});
+        axios.post("http://localhost:5555/annonce", { title, description, createdAt,active });
         
     };
-    connect () {
-        const connard = "iduhgaugduyégfdyeégfigeuzf"
-        localStorage.setItem('myData', connard);
-    }
-    deconnect () {
-        localStorage.removeItem('myData');
-    }
+  
 
     async componentDidMount() {
         const categories = await axios.get("http://localhost:5555/categories")
@@ -79,11 +72,7 @@ export default class CreateAnnonce extends Component {
 
                     <p>{user !== undefined ? user.first_name : ""} </p>
                     <p>{user !== undefined ? user.last_name : ""} </p>
-                    <p>{user !== undefined ? user.last_name : ""} </p>
-                    {/* <p>{user !== undefined ?  : ""} </p> */}
-
-                    <button onClick={this.connect}>login </button>
-                    <button onClick={this.deconnect}>lougout </button>
+             
 
                 </form>
             </div>
