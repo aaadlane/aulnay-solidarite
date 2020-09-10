@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { APIHandler } from './../../api/handler';
 const annonceHandler = new APIHandler("/annonce");
 
@@ -14,8 +15,8 @@ export default class AnnonceAdmin extends Component {
       handleDelete = async (id) => {
       await annonceHandler.deleteOne(id);
         const apiRes2 = await annonceHandler.getAll();
-        console.log(apiRes2);
-        this.setState({ categs: apiRes2.data });
+        // console.log(apiRes2);
+        this.setState({ anno : apiRes2.data });
         // window.alert("are you sure")
     }
 
@@ -42,7 +43,10 @@ export default class AnnonceAdmin extends Component {
                                 <td className="table-div" > {ann.id_user.first_name} </td>
                                 <td className="table-div"> {ann.id_category.category_name} </td>
                                 <td className="table-div"> {ann.title}  </td>
-                                <td className="table-div"> <button className="button muted-button">Edit</button> </td>
+                                <td className="table-div"> 
+                                <button className="button muted-button">
+                                    <Link to={`/editannonce/${ann._id}`}>Edit</Link> 
+                                    </button> </td>
                                 <td className="table-div"> <button className="button muted-button"
                                 onClick={() => this.handleDelete(ann._id)}
                                 >Delete</button> </td>

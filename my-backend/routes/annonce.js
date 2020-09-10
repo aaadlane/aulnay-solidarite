@@ -22,7 +22,7 @@ router.post("/", async (req, res, next) => {
 
 router.get("/:id", async (req, res, next) => {
   try {
-    const getAnnonce = await AnnonceModel.findById(req.params.id);
+    const getAnnonce = await AnnonceModel.findById(req.params.id).populate("id_user").populate("id_category");
     res.json(getAnnonce)
   } catch (err) {
     next(err)
