@@ -48,6 +48,8 @@ app.use("/annonce", require("./routes/annonce"));
 app.use("/associations", require("./routes/associations.js"));
 app.use("/categories", require("./routes/categories"));
 app.use("/messagerie", require("./routes/messagerie"));
+app.use("/api/auth", require("./routes/api.auth"));
+app.use("/api/contact", require("./routes/api.contact"));
 
 
 

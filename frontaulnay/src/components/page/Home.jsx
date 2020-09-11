@@ -1,8 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { useContext } from "react";
+import { Link } from 'react-router-dom';
+import AuthContext from "./../auth/AuthContext";
+
 
 
 export default function Home() {
+    const AuthContextValue = useContext(AuthContext);
+
+    console.log("AuthContextValue ? >>> ", AuthContextValue);
+
     return (
         <div className="home" >
             <div className="block-one-texte">

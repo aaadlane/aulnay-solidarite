@@ -3,6 +3,9 @@ import "./styles/App.css";
 import HeaderMain from "./components/Layout/HeaderMain";
 import FooterMain from "./components/Layout/FooterMain";
 import { Switch, Route } from "react-router-dom";
+import AuthProvider from "./components/auth/AuthProvider";
+import {ProtectedRoute} from "./../src/components/auth/ProtectedRoute.jsx";
+
 
 //pages
 import Home from "./components/page/Home";
@@ -32,12 +35,13 @@ import EditAnnonces from "./components/CrudAdmin/EditAnnonces";
 function App() {
   return (
     <div className="App">
-      <HeaderMain />
+  <AuthProvider>
+  <HeaderMain />
       <main>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
+          <ProtectedRoute path="/contact" component={Contact} />
           <Route path="/annonces" component={Annonce} />
           {/* <Route path="/associations" component={Associations} /> */}
           <Route path="/dashboard" component={Dashboard} />
@@ -45,9 +49,9 @@ function App() {
           <Route path="/editprofile" component={EditProfile} />
           <Route path="/manageannounce" component={ManageAnnounce} />
           <Route path="/signup" component={SignUp} />
-          <Route path="/login" component={LoginPageSignIn} />
+          <Route path="/signin" component={LoginPageSignIn} />
           <Route path="/createannonce" component={CreateAnnonce} />
-          <Route path="/dashboardadmin" component={DashBoardAdmin} />
+          <ProtectedRoute path="/dashboardadmin" component={DashBoardAdmin} />
           <Route path="/annonceadmin" component={AnnonceAdmin} />
           {/* <Route path="/associationadmin" component={AssociationsAdmin} /> */}
           <Route path="/categorieadmin" component={CategorieAdmin} />
@@ -59,6 +63,7 @@ function App() {
         </Switch>
       </main>
       <FooterMain />
+  </AuthProvider>
     </div>
   );
 }
