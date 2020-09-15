@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import { apiHandler } from "./../../api/handler";
+import AuthContext from "./../auth/AuthContext";
+import axios from "axios";
+
+// const handler = apiHandler();
 
 
 export default class CreateAnnonce extends Component {
@@ -9,6 +13,8 @@ export default class CreateAnnonce extends Component {
     handleChange = (evt) => {
         this.setState({ [evt.target.name]: evt.target.value });
     };
+    static contextType = AuthContext; 
+      
 
     handleSubmit = (evt) => {
         evt.preventDefault();
@@ -18,6 +24,9 @@ export default class CreateAnnonce extends Component {
         console.log("createdat",createdAt);
         const active = this.state.active;
         console.log("active",active);
+        console.log("authcontext",AuthContext)
+        console.log("this.props)",this.props)
+        
         // faire une condition si categorie name = celui de la value alors renvoie categorie.id
 
         axios.post("http://localhost:5555/annonce", { title, description, createdAt,active });
@@ -32,6 +41,8 @@ export default class CreateAnnonce extends Component {
         this.setState({ users: user.data })
     }
     render() {
+        console.log("this.props)",this.props)
+
         const categorie = this.state.categorie
         // console.log("@@@@@@@", categorie)
         const user = this.state.users

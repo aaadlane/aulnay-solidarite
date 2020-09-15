@@ -18,7 +18,7 @@ import Dashboard from "./components/page/Dashboard";
 import Messagerie from "./components/ComponentsDashboard/Messagerie";
 import DashBoardAdmin from "./components/ComponentsDashboard/DashBoardAdmin";
 import CreateAnnonce from "./components/ComponentsDashboard/CreateAnnonce";
-import EditProfile from "./components/ComponentsDashboard/EditProfile";
+// import EditProfile from "./components/ComponentsDashboard/EditProfile";
 import ManageAnnounce from "./components/ComponentsDashboard/ManageAnnounce";
 import SignUp from "./components/LoginPage/SignUp";
 import LoginPageSignIn from "./components/LoginPage/LoginPageSignIn";
@@ -46,7 +46,7 @@ function App() {
           {/* <Route path="/associations" component={Associations} /> */}
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/messagerie" component={Messagerie} />
-          <Route path="/editprofile" component={EditProfile} />
+          {/* <Route path="/editprofile" component={EditProfile} /> */}
           <Route path="/manageannounce" component={ManageAnnounce} />
           <Route path="/signup" component={SignUp} />
           <Route path="/signin" component={LoginPageSignIn} />

@@ -8,11 +8,12 @@ export default function ButtonSignout() {
 
   const handleSignout = () => {
     AuthContextValue.signout();
+    
   };
 
   return (
     <FontAwesomeIcon
-      size="4x"
+      size="1x"
       className="is-clickable link icon signout"
       icon={faUserSlash}
       onClick={handleSignout}

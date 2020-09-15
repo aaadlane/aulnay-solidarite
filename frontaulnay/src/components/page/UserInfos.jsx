@@ -16,15 +16,16 @@ export default class UserInfos extends Component {
       updateUser = async (e) => {
         e.preventDefault(); // classique : empêche l'event submit du formulaire de rafraîchir la page
     
-        try {
+        try { 
           const apiRes = await handler.patch(
-            "/api/user/" + this.props.context.currentUser._id,
+            "/user/" + this.props.context.currentUser._id,
             { // ci-dessous : prend la valeur du state (si modifié) OU la valeur originale provenant de AuthContext
               first_name: this.state.first_name || this.props.context.currentUser.first_name,
               last_name: this.state.last_name || this.props.context.currentUser.last_name,
               email: this.state.email || this.props.context.currentUser.email,
             }
           );
+          console.log(apiRes);
           this.props.context.setCurrentUser(apiRes.data); // mise à jour AuthContext avec les nouvelles infos user
           console.log("dsdsdsd",apiRes.data);
         } catch (apiErr) {
