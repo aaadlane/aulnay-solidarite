@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { APIHandler } from './../../api/handler';
-const productHandler = new APIHandler("/user");
+import { Link } from 'react-router-dom';
+
+const userHandler = new APIHandler("/user");
 
 
 export default class UsersAdmin extends Component {
@@ -11,8 +13,16 @@ export default class UsersAdmin extends Component {
     //     this.setState({ users: allUsers.data })
     // }
     async componentDidMount() {
-        const apiRes = await productHandler.getAll();
+        const apiRes = await userHandler.getAll();
         this.setState({ users : apiRes.data });
+      }
+
+      handleDelete = async (id) => {
+        await userHandler.deleteOne(id);
+          const apiRes2 = await userHandler.getAll();
+          // console.log(apiRes2);
+          this.setState({ anno : apiRes2.data });
+          // window.alert("are you sure")
       }
 
     render() {
@@ -41,8 +51,8 @@ export default class UsersAdmin extends Component {
                                 <td className="table-div"> {user.last_name}  </td>
                                 <td className="table-div"> {user.email}  </td>
                                 <td className="table-div"> {user.Profile_type}  </td>
-                                <td className="table-div"> <button className="button muted-button">Edit</button> </td>
-                                <td className="table-div"> <button className="button muted-button">Delete</button> </td>
+                                <td className="table-div"> <Link to={`/edituser/${user._id}`}><button>Edit</button></Link>  </td>
+                                <td className="table-div"> <button onClick={() => this.handleDelete(user._id)}>Delete</button> </td>
                             </tr>
                         })}
                     </tbody>

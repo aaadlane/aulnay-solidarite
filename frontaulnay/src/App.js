@@ -29,6 +29,7 @@ import UsersAdmin from "./components/CrudAdmin/UsersAdmin";
 import AddCateg from "./components/CrudAdmin/AddCateg";
 import EditCategory from "./components/CrudAdmin/EditCategory";
 import EditAnnonces from "./components/CrudAdmin/EditAnnonces";
+import EditUsers from "./components/CrudAdmin/EditUsers";
 
 
 
@@ -59,6 +60,7 @@ function App() {
           <Route path="/addcateg" component={AddCateg} />
           <Route path="/editcateg/:id" component={EditCategory} />
           <Route path="/editannonce/:id" component={EditAnnonces} />
+          <Route path="/edituser/:id" component={EditUsers} />
           <Route path="*" component={NotFound} />
         </Switch>
       </main>
