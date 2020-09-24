@@ -35,13 +35,13 @@ export default class UserInfos extends Component {
 
     render() {
         return (
-            <div>
+            <div className="user-info">
 <form
         onChange={this.handleChange}
         onSubmit={this.updateUser}
         className="form"
       >
-        <h3 className="title">My infos</h3>
+        <h3 className="title">Mes informations : </h3>
         <input
           className="input"
           type="text"
@@ -60,7 +60,7 @@ export default class UserInfos extends Component {
           name="email"
           defaultValue={this.props.context.currentUser.email}
         />
-        <button className="btn">update infos</button>
+        <button className="btn">Mettre à jour</button>
       </form>
             </div>
         )

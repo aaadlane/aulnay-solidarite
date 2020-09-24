@@ -4,6 +4,33 @@
     justify-content: center;
     text-align: center;
     padding-bottom: 30px;
+    padding-top: 30px;
+    width: 90%;
+    margin: auto;
+    color: var(--yellowcolor);
+}
+
+.block-one-texte h1 {
+    color: red;
+}
+
+.section-yellow {
+    background-color: var(--yellowcolor);
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.block-one-texte h2 {
+    padding-top: 30px;
+    padding-bottom: 30px
+}
+
+.h1-main {
+    color: var(--redcolor);
+    padding: 30px;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: bold;
 }
 
 .home {
@@ -22,9 +49,7 @@
     font-size: 16px;
 }
 
-.section-one {
-    background-color: var(--yellowcolor)
-}
+
 
 /* Version PC */
 @media only screen and (min-width : 1025px) {
@@ -50,6 +75,9 @@
     .button-main {
         background-color: var(--redcolor);
         border: none;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px gray;
+        box-shadow: 1px black;
         color: white;
         padding: 15px 32px;
         text-align: center;
@@ -59,5 +87,36 @@
         width: 65%;
         margin: 10px auto;
         height: 70px;
+    }
+
+    .box-choice {
+        border: 2px solid var(--graycolor);
+        border-radius: 10px;
+        background-color: var(--yellowcolor);
+        padding: 30px;
+        margin: 30px auto auto;
+        width: 90%;
+        display: flex;
+        text-align: center;
+
+    }
+
+    .section-one h1 {
+        padding-bottom: 20px;
+        text-decoration: underline;
+    }
+
+    .section-one h2 {
+        padding-bottom: 20px;
+        font-weight: bold;
+        font-size: 40px
+    }
+
+    .section-one h3 {
+        padding-bottom: 20px;
+    }
+
+    .section-one p {
+        padding-bottom: 20px;
     }
 }

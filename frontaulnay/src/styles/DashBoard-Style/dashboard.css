@@ -1,3 +1,18 @@
+.dashboard {
+    background-color: var(--bluecolor);
+    text-align: center;
+    min-height: 80vh;
+}
+
+.dash-title {
+    color: var(--yellowcolor)
+}
+
+.dash-welcome {
+    color: var(--redcolor);
+    font-weight: bold;
+}
+
 /* Version PC */
 @media only screen and (min-width : 1025px) {
     .dashboard {
@@ -16,5 +31,31 @@
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .dashboard {
         padding-top: 124px;
+    }
+
+    .dash-yellow{
+        background-color: var(--yellowcolor);
+        width: 310px;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px black
+    }
+
+    .dash-title {
+        padding-bottom: 30px;
+    }
+
+    .dash-welcome {
+        padding-bottom: 30px;
+    }
+
+    .user-info {
+        width: 300px;
+        margin: auto;
+    }
+
+    .dash-links {
+        display: flex;
+        flex-direction: column;
     }
 }

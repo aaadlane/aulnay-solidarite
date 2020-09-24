@@ -1,19 +1,55 @@
+.login-page{
+    background-color: var(--bluecolor);
+    min-height: 80vh;
+    text-align:center
+}
+
 /* Version PC */
 @media only screen and (min-width : 1025px) {
-    .LoginPage{
+    .login-page{
         padding-top: 124px;
     }
 }
 /* Version Tablette */
 @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
-    .LoginPage{
+    .login-page{
         padding-top: 124px;
     }
 }
 /* Version Mobile */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
-    .LoginPage{
+    .login-page{
         padding-top: 124px;
     }
+    .bloc-connect{
+        background-color: var(--yellowcolor);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 310px;
+        height:300px;
+        margin: 30px auto;       
+        color: var(--redcolor);
+        box-shadow: 5px 5px 5px black
+
+    }
+    .login-page > .title{
+        color: var(--yellowcolor)
+    }
+    .btn-signin{
+        margin:30px auto 0;
+        width: 10vw
+    }
+    .input-signin{
+        width:60vw;
+        margin: 10px auto;
+    }
+    .text-signup{
+        color: var(--redcolor);
+        padding-top: 20px;
+        margin: auto;
+        width: 300px
+    }
+
 }

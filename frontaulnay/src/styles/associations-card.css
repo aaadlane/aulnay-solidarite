@@ -1,6 +1,6 @@
 /* Version PC */
 @media only screen and (min-width : 1025px) {
-   
+
     .association-img {
         width: 200px;
         height: 130px;
@@ -10,7 +10,7 @@
 
 /* Version Tablette */
 @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
-   
+
     .association-img {
         width: 200px;
         height: 130px;
@@ -21,7 +21,7 @@
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
     .association-card {
-        border: solid 2px var(--graycolor);
+        border: solid 2px var(--redcolor);
         border-radius: 10px;
         max-height: 300px;
         max-width: 220px;
@@ -30,16 +30,17 @@
         display: flex;
         justify-content: center;
         align-items: center;
-       
+
     }
-    .association-conteneur{
+
+    .association-conteneur {
         display: block;
         margin: auto;
 
     }
 
     .association-name {
-        color: var(--bluecolor);
+        color: var(--yellowcolor);
         font-size: 20px;
     }
 
@@ -56,12 +57,18 @@
         height: 130px;
     }
 
-    .city-country-and-zip {
+    .theme-asso {
         font-size: 17px;
     }
 
     .street-area-number {
         font-size: 15px;
+    }
+
+    .asso-description {
+
+        font-size: 17px;
+
     }
 
 

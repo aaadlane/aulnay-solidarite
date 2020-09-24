@@ -1,4 +1,22 @@
- /* Version PC */
+.form {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  .btn {
+    cursor: pointer;
+  }
+
+  .contact{
+      background-color: var(--bluecolor);
+      min-height:80vh;
+      
+  } 
+  
+
+/* Version PC */
 @media only screen and (min-width : 1025px) {
     .contact {
         padding-top: 124px;
@@ -9,10 +27,26 @@
     .contact {
         padding-top: 124px;
     }
+
+    /* .form {
+        min-width: 300px;
+        max-width: 400px;
+      
+      } */
 }
 /* Version Mobile */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .contact {
         padding-top: 124px;
+        display: grid;
+        place-items: center;
     }
+    .form {
+        max-width: calc(100vw - 20px);
+      }
+      .form .label {
+        cursor: pointer;
+        display: block;
+        margin-bottom: 5px;
+      }
 }

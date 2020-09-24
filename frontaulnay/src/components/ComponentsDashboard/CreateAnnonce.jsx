@@ -24,15 +24,17 @@ export default class CreateAnnonce extends Component {
         const id_user = this.context.currentUser._id
         console.log("id_user", id_user);
 
-        let categArray = [];
-        console.log("categ array ",categArray);
         const categorieMap = this.state.categorie;
         console.log("categorie map",categorieMap);
+        let categArray = [];
+        console.log("categ array ",categArray);
         const id_category = categArray;
         console.log("id category",id_category);
         for (let i = 0; i < categorieMap.length; i++) {
             console.log("boucle for categ", categorieMap[i])
-            if (categorieMap[i] !== undefined) { categArray.push(categorieMap[i]._id) }
+            if (categorieMap[i] !== undefined) 
+            { categArray.push(categorieMap[i]._id);
+        }
         }
 
 
@@ -83,8 +85,8 @@ export default class CreateAnnonce extends Component {
                     <br />
 
 
-                    <label htmlFor="category_name" className="label"> Catégorie : </label>
-                    <select name="category_name" id="category_name">
+                    <label htmlFor="id_category" className="label"> Catégorie : </label>
+                    <select name="id_category" id="id_category">
                         <option>choisir</option>
                         {categorie.map((categ, i) => {
                             return <option value={categ.category_name} key={i}> {categ.category_name} </option>

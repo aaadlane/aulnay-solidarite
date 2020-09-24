@@ -13,7 +13,7 @@ import About from "./components/page/About";
 import Contact from "./components/page/Contact";
 import Annonce from "./components/page/Annonce";
 import NotFound from "./components/page/NotFound";
-// import Associations from "./components/page/Associations";
+import Associations from "./components/page/Associations";
 import Dashboard from "./components/page/Dashboard";
 import Messagerie from "./components/ComponentsDashboard/Messagerie";
 import DashBoardAdmin from "./components/ComponentsDashboard/DashBoardAdmin";
@@ -44,7 +44,7 @@ function App() {
           <Route path="/about" component={About} />
           <ProtectedRoute path="/contact" component={Contact} />
           <Route path="/annonces" component={Annonce} />
-          {/* <Route path="/associations" component={Associations} /> */}
+          <Route path="/associations" component={Associations} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/messagerie" component={Messagerie} />
           {/* <Route path="/editprofile" component={EditProfile} /> */}

@@ -11,18 +11,21 @@ export default function Dashboard() {
   return (
     Boolean(AuthContextValue.currentUser) && (
       <div className="dashboard">
-        <h1 className="title">Dashboard</h1>
-        <p>Welcome {AuthContextValue.currentUser.first_name} !</p>
-        <hr />
+        <h1 className="dash-title">Mon espace personnel</h1>
+       <div className="dash-yellow">
+       <p className="dash-welcome">Bienvenue {AuthContextValue.currentUser.first_name} !</p>
         <UserInfos context={AuthContextValue} />
-        <Link to="/messagerie">messagerie</Link><br />
-        <Link to="/manageannounce">manager annonce</Link><br />
+        <div className="dash-links">
+          <Link to="/messagerie">messagerie</Link>
+          <Link to="/manageannounce">manager annonce</Link>
+        </div>
         {Boolean(AuthContextValue.currentUser.role === "admin") && (
           <div>
 
             <Link to="/dashboardadmin">Dashboard Admin</Link>
           </div>
         )}
+       </div>
       </div>
     )
   );

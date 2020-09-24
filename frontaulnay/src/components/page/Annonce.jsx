@@ -20,14 +20,18 @@ export default class Annonce extends Component {
         // console.log("@@@@@@@@", annonces)
 
         return (
-            <div className="annonce">
-                <Link to="/createannonce">
-                    <h2>créer une annonce</h2>
+           <div className="main-annonce">
+               <h1 className="annonce-main-title">Les annonces</h1>
+               <Link to="/createannonce">
+                    <button className="create-annonce-btn"> Créer une annonce</button>
                 </Link>
+                <div className="annonce">
+              
                 {annonces.map((annonce, i) => {
                     return <AnnonceCard annonce={annonce} key={i} />
                 })}
             </div>
+           </div>
         )
     }
 }
