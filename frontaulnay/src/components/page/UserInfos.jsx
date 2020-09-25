@@ -43,24 +43,24 @@ export default class UserInfos extends Component {
       >
         <h3 className="title">Mes informations : </h3>
         <input
-          className="input"
+          className="input-user-info"
           type="text"
           name="first_name"
           defaultValue={this.props.context.currentUser.first_name}
         />
         <input
-          className="input"
+          className="input-user-info"
           type="text"
           name="last_name"
           defaultValue={this.props.context.currentUser.last_name}
         />
         <input
-          className="input"
+          className="input-user-info"
           type="text"
           name="email"
           defaultValue={this.props.context.currentUser.email}
         />
-        <button className="btn">Mettre à jour</button>
+        <button className="btn-userinfo">Mettre à jour</button>
       </form>
             </div>
         )

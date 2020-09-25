@@ -1,6 +1,10 @@
-Faire les categories ajouter annonce / créer une association
-ajouter la validation par le moderatuer pour valider que c'est une association
-ajouter modification utilisateurs
-ajouter créer un utilisateurs
-modifier un utilisateur
+maj :
 
+pour finir :
+
+messagerie et https://stackoverflow.com/questions/41911309/how-to-listen-to-route-changes-in-react-router-v4
+"react router page change event" ecouter les routes pour modifier le "setopen" de la nav;
+
+
+
+apres la deconnexion : rediriger sur accueilx@

@@ -1,6 +1,5 @@
 .signup {
     background-color: var(--bluecolor);
-    min-height: 100vh;
     text-align: center
 }
 
@@ -33,19 +32,29 @@
     }
 
     .yellow-box-signup {
-       
         width: 310px;
         margin: auto;
         background-color: var(--yellowcolor);
-
     }
 
+
+    .title-signup{
+        margin: 30px auto;
+    }
+    
     .form-signup {
         width: 300px;
         display: flex;
         flex-direction: column;
+        margin: auto;
+        color: var(--redcolor);
     }
+
     .form-signup > label{
         margin: 10px auto;
     }
+    .btn-signup{
+        margin: 30px;
+    }
+
 }

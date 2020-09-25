@@ -1,75 +1,46 @@
 import React, { Component } from 'react';
-// import { apiHandler } from "./../../api/handler";
 import AuthContext from "./../auth/AuthContext";
 import axios from "axios";
-
-// const handler = apiHandler();
 
 
 export default class CreateAnnonce extends Component {
     state = {
-        categorie: []
+        categories: []
     }
+
+    static contextType = AuthContext;
+
     handleChange = (evt) => {
         this.setState({ [evt.target.name]: evt.target.value });
     };
-    static contextType = AuthContext;
 
-
-    handleSubmit = (evt) => {
+    handleSubmit = async (evt) => {
         evt.preventDefault();
 
-        // console.log("l'user connecté", this.context.currentUser)
+        const { id_category,
+            title,
+            description,
+            active } = this.state;
 
-        const id_user = this.context.currentUser._id
-        console.log("id_user", id_user);
+        await axios.post("http://localhost:5555/annonce", { 
+            id_user: this.context.currentUser._id,
+            id_category,
+            title,
+            description,
+            createdAt: Date.now(),
+            active
+        });
 
-        const categorieMap = this.state.categorie;
-        console.log("categorie map",categorieMap);
-        let categArray = [];
-        console.log("categ array ",categArray);
-        const id_category = categArray;
-        console.log("id category",id_category);
-        for (let i = 0; i < categorieMap.length; i++) {
-            console.log("boucle for categ", categorieMap[i])
-            if (categorieMap[i] !== undefined) 
-            { categArray.push(categorieMap[i]._id);
-        }
-        }
-
-
-
-        const title = this.state.title;
-        const description = this.state.description;
-        const createdAt = Date.now();
-        // console.log("createdat", createdAt);
-        const active = this.state.active;
-        // console.log("active", active);
-        // console.log("this.con)", this.context)
-
-        // faire une condition si categorie name = celui de la value alors renvoie categorie.id
-
-        axios.post("http://localhost:5555/annonce", { id_user, id_category, title, description, createdAt, active });
         this.props.history.push("/annonce");
-
     };
-
 
     async componentDidMount() {
         const categories = await axios.get("http://localhost:5555/categories")
-        this.setState({ categorie: categories.data })
+        this.setState({ categories: categories.data })
     }
+
     render() {
-        // console.log("user connecté dans le render)", this.context.currentUser)
-
-        const categorie = this.state.categorie
-        console.log("@@@@@@@", categorie)
-        // const user = this.context.currentUser
-        // if (user !== undefined) {
-        // console.log("&&&&&&&&", user.age)
-
-        // }
-
+        const { categories } = this.state;
         return (
             <div className="create-annonce">
                 <h1>Créer une annonce </h1>
@@ -83,13 +54,11 @@ export default class CreateAnnonce extends Component {
                     <label htmlFor="description" className="label"></label>
                     <input type="text" name="description" className="input" placeholder="description de l'annonce" />
                     <br />
-
-
                     <label htmlFor="id_category" className="label"> Catégorie : </label>
                     <select name="id_category" id="id_category">
                         <option>choisir</option>
-                        {categorie.map((categ, i) => {
-                            return <option value={categ.category_name} key={i}> {categ.category_name} </option>
+                        {categories.map((categ, i) => {
+                            return <option value={categ._id} key={i}> {categ.category_name}</option>
                         })}
                     </select>
                     <br />
@@ -101,19 +70,8 @@ export default class CreateAnnonce extends Component {
                     </select>
                     <br />
                     <button className="btn">create !!!</button>
-
-
                 </form>
             </div>
         )
     }
 }
-
-
-
-
-
-
-// //nom utilisateur
-// date//
-// image
