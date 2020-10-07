@@ -3,12 +3,16 @@ import {Link} from 'react-router-dom';
 
 export default function DashBoardAdmin() {
     return (
-        <div className="dashboard-admin">
-            <h1>Dashboard Admin</h1>
+        <div className="dashboard">
+            <h1 className="dash-title">Dashboard Admin</h1>
 
-            <Link to="/annonceadmin">Annonce Admin</Link> <br/>   
-            <Link to="/categorieadmin">Categorie Admin</Link>    <br/>
-            <Link to="/usersadmin">Users Admin</Link>    <br/>
+            <div className="dash-links">
+            <Link to="/annonceadmin">Annonce Admin</Link>  
+            <hr/>  
+            <Link to="/categorieadmin">Categorie Admin</Link>    
+            <hr/>
+            <Link to="/usersadmin">Users Admin</Link>
+            </div>    
             {/* <Link to="/associationadmin">Associations Admin</Link>     */}
         </div>
     )

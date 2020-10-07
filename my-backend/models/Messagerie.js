@@ -5,17 +5,15 @@ const messagerieSchema = new Schema({
     id_annonce: {
         type: Schema.Types.ObjectId
     },
-    message_subject: String,
-    message_content: {
-        message: String,
-        writer: {
-            type: Schema.Types.ObjectId,
-            ref: "User"
-        },
-        reader: {
-            type: Schema.Types.ObjectId,
-            ref: "User"
-        }
+    message_content: {type:String,
+    default: "champ vide"},
+    writer: {
+        type: Schema.Types.ObjectId,
+        ref: "User"
+    },
+    reader: {
+        type: Schema.Types.ObjectId,
+        ref: "User"
     },
     date: Date,
 });

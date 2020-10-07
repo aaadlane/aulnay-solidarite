@@ -18,11 +18,13 @@ export default function Dashboard() {
 
         </div>
         <div className="dash-links">
-          <Link to="/messagerie">Ma Messagerie</Link>
+          <Link to="/messagerie/:iduser/:idannonce">Ma Messagerie</Link>
+          <hr/>
           <Link to="/manageannounce">Manager mes annonce</Link>
 
           {Boolean(AuthContextValue.currentUser.role === "admin") && (
-            <div>
+            <div> 
+              <hr/>
 
               <Link to="/dashboardadmin">Dashboard réservé à l'admin</Link>
             </div>

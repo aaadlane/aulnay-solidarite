@@ -27,30 +27,29 @@ export default class CategorieAdmin extends Component {
             <div className="categorie-admin">
                 <h1>Categories Admin</h1>
                 {/* { this.state[0].first_name  !== undefined ? this.state[0].first_name : ""} */}
-                <table className="product-manage-table">
-                    <thead>
-                        <tr className="table-row">
-                            <th className="table-head">Name</th>
-                            <th className="table-head">Edit</th>
-                            <th className="table-head">Delete </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {categ.map((cat, i) => {
-                            return <tr key={i} className="table-row">
-                                <td className="table-div" > {cat.category_name}  </td>
-                                <td className="table-div"> <button className="button muted-button"><Link to={`/editcateg/${cat._id}`}>Edit</Link> </button> </td>
-                                <td className="table-div"> <button className="button muted-button"
 
-                                    onClick={() => this.handleDelete(cat._id)}
-
-                                >Delete</button> </td>
+                {categ.map((cat, i) => {
+                    return <table className="product-manage-table">
+                        <thead>
+                            <tr  key={i} className="table-row">
+                                <th className="table-head">Nom</th>
+                                <th className="table-head">Edit</th>
+                                <th className="table-head">Delete </th>
                             </tr>
-                        })}
-                    </tbody>
-                </table>
-                <button><Link to='/addcateg'>Ajouter une catégorie </Link></button>
+                        </thead>
+                        <tbody><tr className="table-row">
+                            <td className="table-div" > {cat.category_name}  </td>
+                            <td className="table-div"> <button className="button muted-button"><Link to={`/editcateg/${cat._id}`}>Edit</Link> </button> </td>
+                            <td className="table-div"> <button className="button muted-button" onClick={() => this.handleDelete(cat._id)}>Delete</button> </td>
+                        </tr>
+                        </tbody>
+                        <button><Link to='/addcateg'>Ajouter une catégorie </Link></button>
+                    </table>
+                })}
+
+
             </div>
         )
+
     }
 }

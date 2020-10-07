@@ -1,3 +1,7 @@
+.manage-announce{
+background-color: var(--bluecolor);
+}
+
 /* Version PC */
 @media only screen and (min-width : 1025px) {
     .manage-announce {
@@ -17,4 +21,4 @@
     .manage-announce {
         padding-top: 124px;
     }
-}
+} 

@@ -1,20 +1,44 @@
+.annonce-admin, .categorie-admin, .users-admin {
+    background-color: var(--bluecolor);
+    margin: auto;
+}
 /* Version PC */
 @media only screen and (min-width : 1025px) {
-    .annonce-admin {
+    .annonce-admin, .categorie-admin, .users-admin {
         padding-top: 124px;
     }
 }
 
 /* Version Tablette */
 @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
-    .annonce-admin {
+    .annonce-admin, .categorie-admin, .users-admin {
         padding-top: 124px;
     }
 }
 
 /* Version Mobile */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .annonce-admin {
+    .annonce-admin, .categorie-admin, .users-admin {
         padding-top: 124px;
     }
+
+    .users-admin{
+    }
+    table {
+        border: 1px solid var(--redcolor);
+      }
+
+      th{
+        border: 1px solid green;
+
+      }
+      thead{
+        border: 1px solid pink;
+ 
+      }
+
+      td{
+        border: 1px solid var(--yellowcolor);
+
+      }
 }

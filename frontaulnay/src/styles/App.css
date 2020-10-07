@@ -16,10 +16,7 @@
 @import url('./DashBoard-Style/editprofile.css');
 @import url('./LoginSignup/loginpagesignin.css');
 @import url('./LoginSignup/signup.css');
-@import url('./CrudAdmin/useradmin.css');
-@import url('./CrudAdmin/categorieadmin.css');
 @import url('./CrudAdmin/annonceadmin.css');
-@import url('./CrudAdmin/associationadmin.css');
 @import url('./CrudAdmin/addcateg.css');
 @import url('./CrudAdmin/editcateg.css');
 @import url('./CrudAdmin/editusers.css');

@@ -32,7 +32,7 @@ export default class AnnonceAdmin extends Component {
                         <tr className="table-row">
                             <th className="table-head">User</th>
                             <th className="table-head">categorie</th>
-                            <th className="table-head">title</th>
+                            <th className="table-head">titre</th>
                             <th className="table-head">Edit</th>
                             <th className="table-head">Delete </th>
                         </tr>
