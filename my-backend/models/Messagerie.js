@@ -6,7 +6,7 @@ const messagerieSchema = new Schema({
         type: Schema.Types.ObjectId
     },
     message_content: {type:String,
-    default: "champ vide"},
+    default: null},
     writer: {
         type: Schema.Types.ObjectId,
         ref: "User"

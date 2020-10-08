@@ -3,7 +3,7 @@ const MessagerieModel = require("../models/Messagerie");
 
 router.get("/", async (req, res, next) => {
     try {
-      const messagerie = await MessagerieModel.find();
+      const messagerie = await MessagerieModel.find().populate("writer").populate("reader");
       res.json(messagerie);
     } catch (err) {
       next(err);

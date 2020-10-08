@@ -32,8 +32,18 @@ export default class Messagerie extends Component {
 
 
     async componentDidMount() {
-        const messages = await axios.get(process.env.REACT_APP_BACKEND_URL + '/messagerie')
-        this.setState({ messages: messages.data })
+        const messages = await axios.get(process.env.REACT_APP_BACKEND_URL + '/messagerie');
+        const filteredMessage = messages.data.filter(message => {
+            // console.log(message.writer._id, "kdkdkdkdk");
+            // console.log(this.context.currentUser._id, "kdkdkdkdk");
+            if (message.writer._id === this.context.currentUser._id && message.reader._id === this.props.match.params.iduser)
+                return message;
+        })
+        console.log(filteredMessage, "djhddhdhdhgd");
+        console.log(messages.data, "djhddhdhdhgd");
+
+        this.setState({ messages: messages.data });
+
     }
 
     render() {
