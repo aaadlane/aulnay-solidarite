@@ -1,11 +1,24 @@
 .asso-main {
     background-color: var(--bluecolor)
 }
-
+.associations-main-name{
+color: var(--yellowcolor);
+text-align: center;
+}
+.associations {
+   padding-bottom: 30px;
+}
 /* Version PC */
 @media only screen and (min-width : 1025px) {
     .asso-main {
         padding-top: 124px;
+    }
+    .associations {
+        padding-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+        align-items: stretch;
     }
 }
 
@@ -17,6 +30,13 @@
 @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
     .asso-main {
         padding-top: 124px;
+    }
+    .associations {
+        padding-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+        align-items: stretch;
     }
 }
 

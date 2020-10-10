@@ -6,17 +6,17 @@ const annonceHandler = new APIHandler("/annonce");
 
 export default class AnnonceAdmin extends Component {
 
-    state = { annonces : [] }
+    state = { annonces: [] }
 
     async componentDidMount() {
         const apiRes = await annonceHandler.getAll();
-        this.setState({ annonces : apiRes.data });
-      }
-      handleDelete = async (id) => {
-      await annonceHandler.deleteOne(id);
+        this.setState({ annonces: apiRes.data });
+    }
+    handleDelete = async (id) => {
+        await annonceHandler.deleteOne(id);
         const apiRes2 = await annonceHandler.getAll();
         // console.log(apiRes2);
-        this.setState({ anno : apiRes2.data });
+        this.setState({ anno: apiRes2.data });
         // window.alert("are you sure")
     }
 
@@ -27,36 +27,37 @@ export default class AnnonceAdmin extends Component {
             <div className="annonce-admin">
                 <h1>Annonces Admin</h1>
 
-                <table className="product-manage-table">
-                    <thead>
-                        <tr className="table-row">
-                            <th className="table-head">User</th>
-                            <th className="table-head">categorie</th>
-                            <th className="table-head">titre</th>
-                            <th className="table-head">Edit</th>
-                            <th className="table-head">Delete </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {annonces.map((ann, i) => {
-                            return <tr key={i} className="table-row">
-                                <td className="table-div" > {ann.id_user.first_name} </td>
-                                <td className="table-div"> {ann.id_category.category_name} </td>
-                                <td className="table-div"> {ann.title}  </td>
-                                <td className="table-div"> 
-                                <button className="button muted-button">
-                                    <Link to={`/editannonce/${ann._id}`}>Edit</Link> 
-                                    </button> </td>
-                                <td className="table-div"> <button className="button muted-button"
-                                onClick={() => this.handleDelete(ann._id)}
-                                >Delete</button> </td>
 
+                {annonces.map((ann, i) => {
+                    return <table className="product-manage-table">
+                        <thead>
+                            <tr className="table-row">
+                                <th className="table-head">Utilisateur</th>
+                                <th className="table-head">Categorie</th>
+                                <th className="table-head">Titre</th>
+                                <th className="table-head">Modifier</th>
+                                <th className="table-head">Supprimer </th>
                             </tr>
-                        })}
+                        </thead>
+                        <tbody><tr key={i} className="table-row">
+                            <td className="table-div" > {ann.id_user.first_name} </td>
+                            <td className="table-div"> {ann.id_category.category_name} </td>
+                            <td className="table-div"> {ann.title}  </td>
+                            <td className="table-div">
+                                <button className="button muted-button">
+                                    <Link to={`/editannonce/${ann._id}`}>Modifier</Link>
+                                </button> </td>
+                            <td className="table-div"> <button className="button muted-button"
+                                onClick={() => this.handleDelete(ann._id)}
+                            >Supprimer</button> </td>
+
+                        </tr>
+                        </tbody>
+                    </table>
+                })}
 
 
-                    </tbody>
-                </table>
+
 
 
             </div>

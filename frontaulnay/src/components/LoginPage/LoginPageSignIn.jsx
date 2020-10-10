@@ -53,7 +53,7 @@ export default class Signin extends Component {
               defaultValue={this.state.password}
               autoComplete="current-password"
             />
-            <button className="btn-signin">ok</button>
+            <button className="btn-userinfo">Connexion</button>
 
           </form>
         </div>

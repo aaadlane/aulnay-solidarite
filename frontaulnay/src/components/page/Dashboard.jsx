@@ -15,16 +15,15 @@ export default function Dashboard() {
         <div className="dash-yellow">
           <p className="dash-welcome">Bienvenue {AuthContextValue.currentUser.first_name} !</p>
           <UserInfos context={AuthContextValue} />
-
         </div>
         <div className="dash-links">
           <Link to="/messagerie/:iduser/:idannonce">Ma Messagerie</Link>
-          <hr/>
+          <hr />
           <Link to="/manageannounce">Manager mes annonce</Link>
 
           {Boolean(AuthContextValue.currentUser.role === "admin") && (
-            <div> 
-              <hr/>
+            <div>
+              <hr />
 
               <Link to="/dashboardadmin">Dashboard réservé à l'admin</Link>
             </div>

@@ -1,11 +1,35 @@
-.manage-announce{
-background-color: var(--bluecolor);
+.manage-announce {
+    background-color: var(--bluecolor);
 }
 
 /* Version PC */
 @media only screen and (min-width : 1025px) {
     .manage-announce {
         padding-top: 124px;
+    }
+
+    .manage-announce>h1 {
+        color: var(--yellowcolor);
+        text-align: center;
+
+    }
+
+    .btn-dash {
+        margin: 10px 10px;
+        background-color: var(--yellowcolor);
+        border: none;
+        border-radius: 10px;
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .article-annonce {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+        align-items: center;
     }
 }
 
@@ -14,6 +38,30 @@ background-color: var(--bluecolor);
     .manage-announce {
         padding-top: 124px;
     }
+
+    .manage-announce>h1 {
+        color: var(--yellowcolor);
+        text-align: center;
+
+    }
+
+    .btn-dash {
+        margin: 10px 10px;
+        background-color: var(--yellowcolor);
+        border: none;
+        border-radius: 10px;
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .article-annonce {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+        align-items: center;
+    }
 }
 
 /* Version Mobile */
@@ -21,4 +69,30 @@ background-color: var(--bluecolor);
     .manage-announce {
         padding-top: 124px;
     }
-} 
+
+    .manage-announce>h1 {
+        color: var(--yellowcolor);
+        text-align: center;
+
+    }
+
+    .btn-dash {
+        margin: 10px 10px;
+        background-color: var(--yellowcolor);
+        border: none;
+        border-radius: 10px;
+        padding: 5px 5px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+    .article-annonce {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+        align-items: center;
+    }
+
+
+}

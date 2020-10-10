@@ -1,7 +1,7 @@
 .dashboard {
     background-color: var(--bluecolor);
     text-align: center;
-    min-height: 80vh;
+    min-height: 100vh;
 }
 
 .dash-title {
@@ -13,10 +13,71 @@
     font-weight: bold;
 }
 
+.btn-userinfo{
+    margin: 30px auto;
+    background-color: var(--redcolor);
+    border: none;
+    border-radius:10px;
+    padding: 10px 10px;
+}
+.dash-yellow{
+  border: 1px solid var(--redcolor)
+}
+
+.dash-links {
+  border: 1px solid var(--yellowcolor);
+  box-shadow: 5px 5px 5px black
+
+}
 /* Version PC */
 @media only screen and (min-width : 1025px) {
     .dashboard {
         padding-top: 124px;
+    }
+
+    .dash-yellow{
+        background-color: var(--yellowcolor);
+        width: 310px;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px black
+    }
+
+    .dash-title {
+        padding-bottom: 30px;
+    }
+
+    .dash-welcome {
+        padding-bottom: 30px;
+    }
+
+    .user-info {
+        width: 300px;
+        margin: auto;
+    }
+
+    .dash-links {
+        display: flex;
+        flex-direction: column;
+    }
+    .input-user-info {
+        margin: 5px auto;
+    }
+    .btn-userinfo{
+        margin: 30px auto;
+    }
+
+    .dash-links{
+        background-color: var(--redcolor);
+        width: 310px;
+        margin: 30px auto;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px black;
+        padding: 10px;
+    }
+    .dash-links  a{
+        text-decoration: none;
+        color: var(--yellowcolor);
     }
 }
 
@@ -24,6 +85,51 @@
 @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
     .dashboard {
         padding-top: 124px;
+    }
+
+    .dash-yellow{
+        background-color: var(--yellowcolor);
+        width: 310px;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px black
+    }
+
+    .dash-title {
+        padding-bottom: 30px;
+    }
+
+    .dash-welcome {
+        padding-bottom: 30px;
+    }
+
+    .user-info {
+        width: 300px;
+        margin: auto;
+    }
+
+    .dash-links {
+        display: flex;
+        flex-direction: column;
+    }
+    .input-user-info {
+        margin: 5px auto;
+    }
+    .btn-userinfo{
+        margin: 30px auto;
+    }
+
+    .dash-links{
+        background-color: var(--redcolor);
+        width: 310px;
+        margin: 30px auto;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px black;
+        padding: 10px;
+    }
+    .dash-links  a{
+        text-decoration: none;
+        color: var(--yellowcolor);
     }
 }
 
@@ -62,7 +168,6 @@
         margin: 5px auto;
     }
     .btn-userinfo{
-        width: 40vw;
         margin: 30px auto;
     }
 
@@ -77,7 +182,5 @@
     .dash-links  a{
         text-decoration: none;
         color: var(--yellowcolor);
-
-
     }
 }

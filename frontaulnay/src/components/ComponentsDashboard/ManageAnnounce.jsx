@@ -22,9 +22,9 @@ export default class ManageAnnounce extends Component {
     static contextType = AuthContext; 
 
     async componentDidMount() {
-        const categories = await axios.get("http://localhost:5555/categories")
+        const categories = await axios.get(process.env.REACT_APP_BACKEND_URL + '/categories')
         this.setState({ categorie: categories.data })
-        const allAnnonces = await axios.get("http://localhost:5555/annonce/")
+        const allAnnonces = await axios.get(process.env.REACT_APP_BACKEND_URL + '/annonce')
         this.setState({ annonces: allAnnonces.data })
         console.log("get annonce", allAnnonces);
         console.log("get annonce data ", allAnnonces.data);
@@ -82,12 +82,13 @@ export default class ManageAnnounce extends Component {
                 <h1> Mes annonce </h1>
 
 
-                <article>{annoncesList.map((ann, i) => {
-                    return <div>
-                        <button onClick={() => this.handleDelete(ann._id)}>Supprimer</button>
-                        <Link to={`/editannonce/${ann._id}`}><button>Edit</button></Link>
+                <article className="article-annonce">{annoncesList.map((ann, i) => {
+                    return <div className="annonce-cardz">
 
                         <AnnonceCard annonce={ann} key={i} />
+                        <button onClick={() => this.handleDelete(ann._id)} className="btn-dash">Supprimer</button>
+                        <Link to={`/editannonce/${ann._id}`}><button className="btn-dash">Modifier </button></Link>
+
                     </div>
                 })}
 

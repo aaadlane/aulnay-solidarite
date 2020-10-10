@@ -22,7 +22,7 @@ export default class CreateAnnonce extends Component {
             description,
             active } = this.state;
 
-        await axios.post("http://localhost:5555/annonce", { 
+        await axios.post(process.env.REACT_APP_BACKEND_URL + '/annonce', { 
             id_user: this.context.currentUser._id,
             id_category,
             title,
@@ -35,7 +35,7 @@ export default class CreateAnnonce extends Component {
     };
 
     async componentDidMount() {
-        const categories = await axios.get("http://localhost:5555/categories")
+        const categories = await axios.get(process.env.REACT_APP_BACKEND_URL + '/categories')
         this.setState({ categories: categories.data })
     }
 
@@ -44,17 +44,18 @@ export default class CreateAnnonce extends Component {
         return (
             <div className="create-annonce">
                 <h1>Créer une annonce </h1>
-                <form className="form"
+            <div className="bloc-connect">
+            <form className="form"
                     onChange={this.handleChange}
                     onSubmit={this.handleSubmit}>
                     <br />
-                    <label htmlFor="title" className="label"></label>
-                    <input type="text" name="title" className="input" placeholder="titre de l'annonce" />
+                    <label htmlFor="title" className="label"> Titre de l'annonce :</label>
+                    <input type="text" name="title" className="input" placeholder="Quel est le titre de l'annonce ?" />
                     <br />
-                    <label htmlFor="description" className="label"></label>
-                    <input type="text" name="description" className="input" placeholder="description de l'annonce" />
+                    <label htmlFor="description" className="label">Description de l'annonce : </label>
+                    <input type="text" name="description" className="input" placeholder="Quelle est la description de l'annonce" />
                     <br />
-                    <label htmlFor="id_category" className="label"> Catégorie : </label>
+                    <label htmlFor="id_category" className="label"> Choisir la catégorie : </label>
                     <select name="id_category" id="id_category">
                         <option>choisir</option>
                         {categories.map((categ, i) => {
@@ -62,15 +63,16 @@ export default class CreateAnnonce extends Component {
                         })}
                     </select>
                     <br />
-                    <label htmlFor="active" className="active"> Annonce active </label>
+                    <label htmlFor="active" className="active"> Statut de l'annonce : </label>
                     <select name="active" id="active">
                         <option>Choisir</option>
                         <option value="true">active</option>
                         <option value="false">inactive</option>
                     </select>
                     <br />
-                    <button className="btn">create !!!</button>
+                    <button className="btn-editannonce">Créer l'annonce</button>
                 </form>
+            </div>
             </div>
         )
     }

@@ -5,6 +5,58 @@
         width: 200px;
         height: 130px;
     }
+    .association-card {
+        border: solid 2px var(--redcolor);
+        border-radius: 10px;
+        max-height: 300px;
+        max-width: 220px;
+        padding: 20px;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .association-conteneur {
+        display: block;
+        margin: auto;
+
+    }
+
+    .association-name {
+        color: var(--yellowcolor);
+        font-size: 20px;
+    }
+
+    .user-associated {
+        font-size: 17px;
+    }
+
+    .fig-img-association {
+        padding-bottom: 10px;
+    }
+.name-asso{
+    color: var(--redcolor)
+}
+    .association-img {
+        width: 200px;
+        height: 130px;
+    }
+
+    .theme-asso {
+        font-size: 17px;
+    }
+
+    .street-area-number {
+        font-size: 15px;
+    }
+
+    .asso-description {
+
+        font-size: 17px;
+
+    }
 }
 
 
@@ -14,6 +66,58 @@
     .association-img {
         width: 200px;
         height: 130px;
+    }
+    .association-card {
+        border: solid 2px var(--redcolor);
+        border-radius: 10px;
+        max-height: 300px;
+        max-width: 220px;
+        padding: 20px;
+        overflow: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .association-conteneur {
+        display: block;
+        margin: auto;
+
+    }
+
+    .association-name {
+        color: var(--yellowcolor);
+        font-size: 20px;
+    }
+
+    .user-associated {
+        font-size: 17px;
+    }
+
+    .fig-img-association {
+        padding-bottom: 10px;
+    }
+
+    .association-img {
+        width: 200px;
+        height: 130px;
+    }
+
+    .theme-asso {
+        font-size: 17px;
+    }
+
+    .street-area-number {
+        font-size: 15px;
+    }
+.name-asso{
+    color: var(--redcolor)
+}
+    .asso-description {
+
+        font-size: 17px;
+
     }
 }
 
@@ -32,7 +136,9 @@
         align-items: center;
 
     }
-
+.name-asso{
+    color: var(--redcolor)
+}
     .association-conteneur {
         display: block;
         margin: auto;

@@ -1,3 +1,24 @@
+.edit-annonces{
+    background-color: var(--bluecolor);
+    height: 80vh;
+}
+.edit-annonces >h1{
+    text-align: center;
+    color: var(--yellowcolor);
+}
+.holotitle {
+    color: var(--bluecolor);
+}
+
+.btn-editannonce{
+    background-color: var(--redcolor);
+    border-radius: 10px;
+    padding: 5px 5px;
+    border: none;
+    margin: auto;
+    width: 190px
+    
+}
 /* Version PC */
 @media only screen and (min-width : 1025px) {
     .edit-annonces {

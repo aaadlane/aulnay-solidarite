@@ -19,12 +19,196 @@
     .about {
         padding-top: 124px;
     }
+    .about {
+        padding-top: 124px;
+    }
+
+    .first-section {
+        padding: 30px;
+    }
+
+    .firsth1 {
+        text-align: center;
+        color: var(--yellowcolor)
+    }
+
+    .second-section {
+        text-align: center;
+        padding: 30px;
+        color: var(--redcolor);
+    }
+
+    .ptihr {
+        width: 20vw;
+        height: 4px;
+        margin: auto;
+        background-color: var(--bluecolor);
+        margin-top: 10px
+    }
+
+    .text-second-section {
+        margin: 30px auto;
+        color: var(--graycolor)
+    }
+
+    .third-section,
+    .fourth-section {
+        text-align: center;
+
+    }
+
+    .thirdh1 {
+        color: var(--yellowcolor);
+        margin: 20px auto 10px;
+        padding-top: 30px;
+    }
+
+    .farecycle {
+        background-color: var(--redcolor);
+        border-radius: 50%;
+        height: 49px;
+        width: 49px;
+        margin: 20px auto 0 auto;
+        padding: 5px 0 0 6px
+    }
+
+    .icon-recycle {
+        color: var(--graycolor);
+    }
+
+    .text-section3 {
+        margin: 30px auto 0;
+        text-align: center;
+        color: var(--graycolor);
+    }
+
+    .majuscule {
+        font-size: 20px;
+        font-weight: bold;
+        font-size: 1, 3em;
+    }
+
+    .motrouge {
+        color: var(--redcolor);
+        padding-right: 10px
+    }
+
+    .fourth-section {
+        background-color: var(--graycolor);
+    }
+
+    .text-section-four {
+        padding-top: 30px;
+        color: var(--bluecolor);
+    }
+
+    .text-section-four>ul {
+        text-align: left;
+        padding-top:15px
+    }
+
+    .text-section-four>ul>li:before {
+        content:"• ";
+        padding-left:10px
+    }
 }
 
 /* Version Tablette */
 @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
     .about {
         padding-top: 124px;
+    }
+    .about {
+        padding-top: 124px;
+    }
+
+    .first-section {
+        padding: 30px;
+    }
+
+    .firsth1 {
+        text-align: center;
+        color: var(--yellowcolor)
+    }
+
+    .second-section {
+        text-align: center;
+        padding: 30px;
+        color: var(--redcolor);
+    }
+
+    .ptihr {
+        width: 20vw;
+        height: 4px;
+        margin: auto;
+        background-color: var(--bluecolor);
+        margin-top: 10px
+    }
+
+    .text-second-section {
+        margin: 30px auto;
+        color: var(--graycolor)
+    }
+
+    .third-section,
+    .fourth-section {
+        text-align: center;
+
+    }
+
+    .thirdh1 {
+        color: var(--yellowcolor);
+        margin: 20px auto 10px;
+        padding-top: 30px;
+    }
+
+    .farecycle {
+        background-color: var(--redcolor);
+        border-radius: 50%;
+        height: 49px;
+        width: 49px;
+        margin: 20px auto 0 auto;
+        padding: 5px 0 0 6px
+    }
+
+    .icon-recycle {
+        color: var(--graycolor);
+    }
+
+    .text-section3 {
+        margin: 30px auto 0;
+        text-align: center;
+        color: var(--graycolor);
+    }
+
+    .majuscule {
+        font-size: 20px;
+        font-weight: bold;
+        font-size: 1, 3em;
+    }
+
+    .motrouge {
+        color: var(--redcolor);
+        padding-right: 10px
+    }
+
+    .fourth-section {
+        background-color: var(--graycolor);
+    }
+
+    .text-section-four {
+        padding-top: 30px;
+        color: var(--bluecolor);
+    }
+
+    .text-section-four>ul {
+        text-align: left;
+        padding-top:15px
+    }
+
+    .text-section-four>ul>li:before {
+        content:"• ";
+        padding-left:10px
     }
 }
 

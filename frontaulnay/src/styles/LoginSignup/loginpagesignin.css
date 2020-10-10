@@ -3,17 +3,81 @@
     min-height: 80vh;
     text-align:center
 }
+.bloc-connect{
+
+    border-radius: 10px;
+    border : 1px solid var(--redcolor);
+}
 
 /* Version PC */
 @media only screen and (min-width : 1025px) {
     .login-page{
         padding-top: 124px;
     }
+    .bloc-connect{
+        background-color: var(--yellowcolor);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 310px;
+        height:300px;
+        margin: 30px auto;       
+        color: var(--redcolor);
+        box-shadow: 5px 5px 5px black;
+        border-radius: 10px;
+    }
+    
+    .login-page > .title{
+        color: var(--yellowcolor)
+    }
+    .btn-signin{
+        margin:30px auto 0;
+        width: 10vw
+    }
+    .input-signin{
+        width:280px;
+        margin: 10px auto;
+    }
+    .text-signup{
+        color: var(--redcolor);
+        padding-top: 20px;
+        margin: auto;
+        width: 300px
+    }
 }
 /* Version Tablette */
 @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
     .login-page{
         padding-top: 124px;
+    }
+    .bloc-connect{
+        background-color: var(--yellowcolor);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 310px;
+        height:300px;
+        margin: 30px auto;       
+        color: var(--redcolor);
+        box-shadow: 5px 5px 5px black
+
+    }
+    .login-page > .title{
+        color: var(--yellowcolor)
+    }
+    .btn-signin{
+        margin:30px auto 0;
+        width: 10vw
+    }
+    .input-signin{
+        width:280px;
+        margin: 10px auto;
+    }
+    .text-signup{
+        color: var(--redcolor);
+        padding-top: 20px;
+        margin: auto;
+        width: 300px
     }
 }
 /* Version Mobile */
@@ -42,7 +106,7 @@
         width: 10vw
     }
     .input-signin{
-        width:60vw;
+        width:280px;
         margin: 10px auto;
     }
     .text-signup{

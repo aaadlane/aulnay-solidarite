@@ -16,7 +16,7 @@ export default class SignUp extends Component {
         adress_street: "",
         adress_street_number: "",
         adress_district: "",
-        Profile_type: "",
+        Profile_type: "user",
         gender: "",
     };
 
@@ -141,7 +141,7 @@ export default class SignUp extends Component {
 
 
 
-                    <button className="btn-signup">Créer mon compte</button>
+                    <button className="btn-userinfo">Créer mon compte</button>
                 </form>
                 </div>
             </div>

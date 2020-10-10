@@ -7,6 +7,10 @@
     color: var(--yellowcolor);
 }
 
+.yellow-box-signup {
+    border-radius: 10px;
+    border-color: 1px solid var(--redcolor);
+}
 
 
 
@@ -15,6 +19,34 @@
     .signup {
         padding-top: 124px;
     }
+
+    .yellow-box-signup {
+        width: 310px;
+        margin: auto;
+        background-color: var(--yellowcolor);
+    }
+
+
+    .title-signup {
+        margin: 30px auto;
+    }
+
+    .form-signup {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        color: var(--redcolor);
+    }
+
+    .form-signup>label {
+        margin: 10px auto;
+    }
+
+    .btn-signup {
+        margin: 30px;
+    }
+
 }
 
 /* Version Tablette */
@@ -22,6 +54,34 @@
     .signup {
         padding-top: 124px;
     }
+
+    .yellow-box-signup {
+        width: 310px;
+        margin: auto;
+        background-color: var(--yellowcolor);
+    }
+
+
+    .title-signup {
+        margin: 30px auto;
+    }
+
+    .form-signup {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        color: var(--redcolor);
+    }
+
+    .form-signup>label {
+        margin: 10px auto;
+    }
+
+    .btn-signup {
+        margin: 30px;
+    }
+
 }
 
 /* Version Mobile */
@@ -38,10 +98,10 @@
     }
 
 
-    .title-signup{
+    .title-signup {
         margin: 30px auto;
     }
-    
+
     .form-signup {
         width: 300px;
         display: flex;
@@ -50,10 +110,11 @@
         color: var(--redcolor);
     }
 
-    .form-signup > label{
+    .form-signup>label {
         margin: 10px auto;
     }
-    .btn-signup{
+
+    .btn-signup {
         margin: 30px;
     }
 

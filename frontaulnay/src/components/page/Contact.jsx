@@ -31,52 +31,56 @@ export default class Contact extends Component {
   render() {
     return (
       <div className="contact">
-          <form
-        className="form"
-        onChange={this.handleChange}
-        onSubmit={this.handleSubmit}
-      >
-        <h1 className="title">Contact</h1>
-        <label htmlFor="full_name" className="label">
-          Votre nom :
+
+<h1 className="title">Contact</h1>
+       <div className="form-contact">
+       <form
+          className="form"
+          onChange={this.handleChange}
+          onSubmit={this.handleSubmit}
+        >
+          
+          <label htmlFor="full_name" className="label">
+            Votre nom :
         </label>
-        <input
-          name="full_name"
-          id="full_name"
-          type="text"
-          className="input"
-          defaultValue={this.state.full_name}
-        />
-        <label htmlFor="email" className="label">
-          Email : 
+          <input
+            name="full_name"
+            id="full_name"
+            type="text"
+            className="input"
+            defaultValue={this.state.full_name}
+          />
+          <label htmlFor="email" className="label">
+            Email :
         </label>
-        <input
-          name="email"
-          type="email"
-          className="input"
-          defaultValue={this.state.email}
-        />
-        <label htmlFor="subject" className="label">
-          Objet : 
+          <input
+            name="email"
+            type="email"
+            className="input"
+            defaultValue={this.state.email}
+          />
+          <label htmlFor="subject" className="label">
+            Objet :
         </label>
-        <input
-          name="subject"
-          id="subject"
-          type="text"
-          className="input"
-          defaultValue={this.state.subject}
-        />
-        <label htmlFor="message" className="label">
-          Message :
+          <input
+            name="subject"
+            id="subject"
+            type="text"
+            className="input"
+            defaultValue={this.state.subject}
+          />
+          <label htmlFor="message" className="label">
+            Message :
         </label>
-        <textarea
-          name="message"
-          id="message"
-          className="input"
-          defaultValue={this.state.message}
-        ></textarea>
-        <button className="btn">ok</button>
-      </form>
+          <textarea
+            name="message"
+            id="message"
+            className="input"
+            defaultValue={this.state.message}
+          ></textarea>
+          <button className="btn-contact">ok</button>
+        </form>
+       </div>
       </div>
     );
   }

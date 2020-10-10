@@ -6,7 +6,11 @@ const userSchema = new Schema({
     last_name: String,
     email: String,
     age: Number,
-    avatar: String,
+    avatar: {
+        type: String,
+        default: "https://res.cloudinary.com/dpdlhag1u/image/upload/v1589985725/samples/animals/kitten-playing.gif"
+    },
+
     password: String,
     description: String,
     adress: {
@@ -15,8 +19,8 @@ const userSchema = new Schema({
         district: String,
     },
     Profile_type: {
-       type : String,
-       enum: ["association", "user"],
+        type: String,
+        enum: ["association", "user"],
     },
     gender: {
         type: String,
@@ -26,8 +30,8 @@ const userSchema = new Schema({
         type: String,
         enum: ["admin", "user"],
         default: "user",
-      },
-    
+    },
+
 });
 
 const UserModel = mongoose.model("User", userSchema);

@@ -32,33 +32,33 @@ const Ul = styled.ul`
 
 
 const RightNav = ({ open }) => {
-    const AuthContextValue = useContext(AuthContext);
+  const AuthContextValue = useContext(AuthContext);
 
-    return (
+  return (
 
-        <Ul open={open}>
-            <NavLink to="/"><li>Accueil</li></NavLink>
-            <NavLink to="/about"><li>About</li></NavLink>
-            <NavLink to="/contact"><li>Contact</li></NavLink>
-            <NavLink to="/annonces"><li>Annonces</li></NavLink>
-            <NavLink to="/associations"><li>Associations</li></NavLink>
-            {AuthContextValue.isSignedIn && (
-                <>
-                
-                    <NavLink to="/dashboard"><li>Dashboard</li></NavLink>
-                    <ButtonSignout />
-                </>
-            )}  
-            {AuthContextValue.isSignout && (
-                <>
-                
-                                <NavLink to="/signin"> <li>Se Connecter</li></NavLink>
-                </>
-            )}
-        
+    <Ul open={open}>
+      <NavLink to="/"><li>Accueil</li></NavLink>
+      <NavLink to="/about"><li>About</li></NavLink>
+      <NavLink to="/contact"><li>Contact</li></NavLink>
+      <NavLink to="/annonces"><li>Annonces</li></NavLink>
+      <NavLink to="/associations"><li>Associations</li></NavLink>
+      {AuthContextValue.isSignedIn && (
+        <>
 
-        </Ul>
-    )
+          <NavLink to="/dashboard"><li>Dashboard</li></NavLink>
+          <ButtonSignout />
+        </>
+      )}
+      {AuthContextValue.isSignout && (
+        <>
+
+          <NavLink to="/signin"> <li>Se Connecter</li></NavLink>
+        </>
+      )}
+
+
+    </Ul>
+  )
 }
 
 export default RightNav

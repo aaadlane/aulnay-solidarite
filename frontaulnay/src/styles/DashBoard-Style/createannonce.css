@@ -1,3 +1,13 @@
+.create-annonce{
+    background-color: var(--bluecolor);
+    height: 80vh;
+}
+
+.create-annonce >h1{
+   color: var(--yellowcolor);
+   text-align: center;
+}
+
 /* Version PC */
 @media only screen and (min-width : 1025px) {
     .create-annonce {

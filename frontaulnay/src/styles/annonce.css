@@ -1,7 +1,22 @@
+.main-annonce{
+    text-align: center;
+}
+.create-annonce-btn{
+    margin: 30px auto;
+    border: none;
+    background-color: var(--yellowcolor);
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
 /* Version PC */
 @media only screen and (min-width : 1025px) {
     .annonce {
-        padding-top: 124px;
+        padding-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+        align-items: center;
     }
 }
 
@@ -10,13 +25,18 @@
 @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
     .annonce {
         padding-top: 124px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-gap: 20px;
+        align-items: center;
     }
+    
 }
 
 /* Version Mobile */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .annonce {
-        padding-top: 30px;
+        padding-top: 124px;
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
         grid-gap: 20px;

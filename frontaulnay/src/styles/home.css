@@ -37,18 +37,6 @@
     background-color: var(--bluecolor)
 }
 
-.button-main {
-    background-color: #4CAF50;
-    /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-
 
 
 /* Version PC */
@@ -56,12 +44,68 @@
     .home {
         padding-top: 124px;
     }
+    .buttons-main{
+        margin: 10px 10px;
+    }
+    .button-main {
+        background-color: var(--redcolor);
+        border: none;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px gray;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 10px 10px;
+        height: 70px;
+    }
+    
+    .box-choice {
+        border: 2px solid var(--graycolor);
+        border-radius: 10px;
+        background-color: var(--yellowcolor);
+        padding: 30px;
+        margin: 30px 10px ;
+        width: 30%;
+      display:inline-block;
+        text-align: center;
+    
+    }
 }
 
 /* Version Tablette */
 @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
     .home {
         padding-top: 124px;
+    }
+    .buttons-main{
+        margin: 10px 10px;
+    }
+    .button-main {
+        background-color: var(--redcolor);
+        border: none;
+        border-radius: 10px;
+        box-shadow: 10px 10px 10px gray;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 10px 10px;
+        height: 70px;
+    }
+    
+    .box-choice {
+        border: 2px solid var(--graycolor);
+        border-radius: 10px;
+        background-color: var(--yellowcolor);
+        padding: 30px;
+        margin: 30px 10px ;
+        width: 30%;
+      display:inline-block;
+        text-align: center;
+    
     }
 }
 

@@ -27,23 +27,25 @@ export default class CategorieAdmin extends Component {
             <div className="categorie-admin">
                 <h1>Categories Admin</h1>
                 {/* { this.state[0].first_name  !== undefined ? this.state[0].first_name : ""} */}
-
+                <div className="btn-manage">
+                    <button className="create-annonce-btn"><Link to='/addcateg'>Ajouter une catégorie </Link></button>
+                </div>
                 {categ.map((cat, i) => {
                     return <table className="product-manage-table">
                         <thead>
-                            <tr  key={i} className="table-row">
-                                <th className="table-head">Nom</th>
-                                <th className="table-head">Edit</th>
-                                <th className="table-head">Delete </th>
+                            <tr key={i} className="table-row">
+                                <th className="table-head">Nom de la catégorie</th>
+                                <th className="table-head">Modifier</th>
+                                <th className="table-head">Supprimer </th>
                             </tr>
                         </thead>
                         <tbody><tr className="table-row">
                             <td className="table-div" > {cat.category_name}  </td>
-                            <td className="table-div"> <button className="button muted-button"><Link to={`/editcateg/${cat._id}`}>Edit</Link> </button> </td>
-                            <td className="table-div"> <button className="button muted-button" onClick={() => this.handleDelete(cat._id)}>Delete</button> </td>
+                            <td className="table-div"> <button className="button muted-button"><Link to={`/editcateg/${cat._id}`}>Modifier</Link> </button> </td>
+                            <td className="table-div"> <button className="button muted-button" onClick={() => this.handleDelete(cat._id)}>Supprimer</button> </td>
                         </tr>
                         </tbody>
-                        <button><Link to='/addcateg'>Ajouter une catégorie </Link></button>
+
                     </table>
                 })}
 

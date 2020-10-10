@@ -10,10 +10,29 @@
   }
 
   .contact{
-      background-color: var(--bluecolor);
-      min-height:80vh;
-      
-  } 
+    background-color: var(--bluecolor);
+    min-height:80vh;
+    
+} .contact > .title{
+ color: var(--yellowcolor)
+} 
+
+.form-contact{
+  border: solid 1px var(--redcolor);
+  background-color: var(--yellowcolor);
+  padding: 30px 30px;
+  border-radius:10px;
+  min-width: 310px;
+}
+.btn-contact{
+  margin: 10px auto;
+  width: 60%;
+  background-color: var(--redcolor);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 10px;
+  color: white;
+}
   
 
 /* Version PC */
@@ -21,11 +40,37 @@
     .contact {
         padding-top: 124px;
     }
+    .contact {
+      padding-top: 124px;
+      display: grid;
+      place-items: center;
+  }
+  .form {
+      max-width: calc(100vw - 20px);
+    }
+    .form .label {
+      cursor: pointer;
+      display: block;
+      margin-bottom: 5px;
+    }
 }
 /* Version Tablette */
 @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
     .contact {
         padding-top: 124px;
+    }
+    .contact {
+      padding-top: 124px;
+      display: grid;
+      place-items: center;
+  }
+  .form {
+      max-width: calc(100vw - 20px);
+    }
+    .form .label {
+      cursor: pointer;
+      display: block;
+      margin-bottom: 5px;
     }
 
     /* .form {

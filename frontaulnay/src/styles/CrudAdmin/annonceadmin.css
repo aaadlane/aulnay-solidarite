@@ -1,44 +1,148 @@
-.annonce-admin, .categorie-admin, .users-admin {
-    background-color: var(--bluecolor);
-    margin: auto;
+.annonce-admin,
+.categorie-admin,
+.users-admin {
+  background-color: var(--bluecolor);
+  min-height: 130vh;
+  margin: auto;
+  align-items: center;
 }
+
+.btn-manage {
+display:flex;
+}
+
+.annonce-admin>h1,
+.categorie-admin>h1,
+.users-admin>h1 {
+  color: var(--yellowcolor);
+  text-align: center;
+
+}
+
 /* Version PC */
 @media only screen and (min-width : 1025px) {
-    .annonce-admin, .categorie-admin, .users-admin {
-        padding-top: 124px;
-    }
+
+  .annonce-admin,
+  .categorie-admin,
+  .users-admin {
+    padding-top: 124px;
+  }
+
+  .table-row {
+    width: 100%
+  }
+
+  table {
+    border: 1px solid var(--graycolor);
+    margin: 10px auto;
+  }
+
+  th {
+    border: 1px solid var(--graycolor);
+    color: var(--yellowcolor);
+
+  }
+
+  thead {
+    border: 1px solid var(--graycolor);
+
+  }
+
+  td {
+    border: 1px solid var(--graycolor);
+
+  }
+
+  .muted-button {
+    background-color: var(--redcolor);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 5px
+  }
 }
 
 /* Version Tablette */
 @media only screen and (min-device-width : 481px) and (max-device-width : 1024px) {
-    .annonce-admin, .categorie-admin, .users-admin {
-        padding-top: 124px;
-    }
+
+  .annonce-admin,
+  .categorie-admin,
+  .users-admin {
+    padding-top: 124px;
+  }
+
+  .table-row {
+    width: 100%
+  }
+
+  table {
+    border: 1px solid var(--graycolor);
+    margin: 10px auto;
+  }
+
+  th {
+    border: 1px solid var(--graycolor);
+    color: var(--yellowcolor);
+
+  }
+
+  thead {
+    border: 1px solid var(--graycolor);
+
+  }
+
+  td {
+    border: 1px solid var(--graycolor);
+
+  }
+
+  .muted-button {
+    background-color: var(--redcolor);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 5px
+  }
 }
 
 /* Version Mobile */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    .annonce-admin, .categorie-admin, .users-admin {
-        padding-top: 124px;
-    }
 
-    .users-admin{
-    }
-    table {
-        border: 1px solid var(--redcolor);
-      }
+  .annonce-admin,
+  .categorie-admin,
+  .users-admin {
+    padding-top: 124px;
+  }
 
-      th{
-        border: 1px solid green;
+  .table-row {
+    width: 100%
+  }
 
-      }
-      thead{
-        border: 1px solid pink;
- 
-      }
+  table {
+    border: 1px solid var(--graycolor);
+    margin: 10px auto;
+  }
 
-      td{
-        border: 1px solid var(--yellowcolor);
+  th {
+    border: 1px solid var(--graycolor);
+    color: var(--yellowcolor);
 
-      }
+  }
+
+  thead {
+    border: 1px solid var(--graycolor);
+
+  }
+
+  td {
+    border: 1px solid var(--graycolor);
+
+  }
+
+  .muted-button {
+    background-color: var(--redcolor);
+    border: none;
+    border-radius: 10px;
+    padding: 5px 5px
+  }
+
+
 }

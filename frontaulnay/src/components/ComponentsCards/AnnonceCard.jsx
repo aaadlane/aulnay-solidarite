@@ -17,10 +17,9 @@ export default function AnnonceCard({ annonce }) {
                 <h3 className="creation-date">{moment(annonce.createdAt).format('DD/MM/YYYY')}</h3>
                 <p className="description">{annonce.description}</p>
                 <Link to={"/messagerie/" + annonce.id_user._id + "/" + annonce._id}>
-                    <button> Envoyer un message </button>
+                    <button className="btn-dash"> Envoyer un message </button>
                 </Link>
             </section>
-            <hr />
 
         </div>
     )
