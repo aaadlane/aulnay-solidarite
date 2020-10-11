@@ -8,10 +8,6 @@ const userHandler = new APIHandler("/user");
 export default class UsersAdmin extends Component {
     state = { users: [] }
 
-    // async componentDidMount() {
-    //     const allUsers = await axios.get("http://localhost:5555/user")
-    //     this.setState({ users: allUsers.data })
-    // }
     async componentDidMount() {
         const apiRes = await userHandler.getAll();
         this.setState({ users: apiRes.data });
@@ -20,19 +16,16 @@ export default class UsersAdmin extends Component {
     handleDelete = async (id) => {
         await userHandler.deleteOne(id);
         const apiRes2 = await userHandler.getAll();
-        // console.log(apiRes2);
         this.setState({ anno: apiRes2.data });
-        // window.alert("are you sure")
+        window.alert("etes vous sur")
     }
 
     render() {
         const users = this.state.users;
-        // if (user !== undefined) console.log("user", user )
 
         return (
             <div className="users-admin">
                 <h1>Users Admin</h1>
-                {/* { this.state[0].first_name  !== undefined ? this.state[0].first_name : ""} */}
 
                 {users.map((user, i) => {
                     return <table className="product-manage-table">

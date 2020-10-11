@@ -9,9 +9,7 @@ export default class EditAnnonces extends Component {
     }
 
     async componentDidMount() {
-        console.log(this.props.match.params.id);
         const apiRes = await annoncesHandler.getById(this.props.match.params.id);
-        console.log(apiRes);
         this.setState(apiRes.data);
     }
     handleChange = (evt) => {
@@ -19,16 +17,12 @@ export default class EditAnnonces extends Component {
     };
     handleSubmit = async (evt) => {
         evt.preventDefault();
-        const apiRes = await annoncesHandler.updateOne(this.state._id, this.state)
-        console.log(apiRes);
-        console.log(this.state._id);
+        await annoncesHandler.updateOne(this.state._id, this.state)
     };
 
     render() {
         const annonces = this.state
-        console.log("22222", annonces)
         const categories = this.state.id_category
-        console.log("333333", categories)
 
         return (
             <div className="edit-annonces">

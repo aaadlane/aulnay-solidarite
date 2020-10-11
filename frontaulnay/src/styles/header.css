@@ -5,7 +5,7 @@ header {
     min-height: 124px;
     width: 100%;
     background-color: var(--bluecolor);
-    border-bottom: var(--graycolor) 1px solid; 
+    border-bottom: var(--graycolor) 1px solid;
 }
 
 .header {
@@ -14,17 +14,23 @@ header {
 
 .logo-header {
     max-height: 90px;
+    margin: 15px 0;
 }
 
 header ul {
     list-style: none;
     text-decoration: none;
+    padding: 30px 10px;
+    color: var(--yellowcolor)
+
 }
+
 
 .nav-links {
     flex-direction: row;
     float: right;
     padding: 50px 60px 30px 0;
+    color: var(--yellowcolor)
 
 }
 
@@ -32,12 +38,15 @@ header ul {
     height: 3vh;
     display: inline-block;
     margin-right: 25px;
+    color: var(--yellowcolor)
 
 }
 
 .nav-links>li>a {
     color: var(--yellowcolor);
     text-decoration: none;
+    color: var(--yellowcolor)
+
 }
 
 /* Version Tablette */

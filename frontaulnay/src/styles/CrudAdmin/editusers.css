@@ -1,3 +1,14 @@
+.edit-users {
+   background-color: var(--bluecolor);
+   height: 80vh;
+ 
+}
+.edit-users > h1 {
+color: var(--yellowcolor);
+text-align: center;
+}
+
+
 /* Version PC */
 @media only screen and (min-width : 1025px) {
     .edit-users {

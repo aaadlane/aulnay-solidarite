@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 
 export default function Dashboard() {
   const AuthContextValue = useContext(AuthContext);
-  // console.log("AuthContextValue ? >>> ", AuthContextValue);
 
   return (
     Boolean(AuthContextValue.currentUser) && (

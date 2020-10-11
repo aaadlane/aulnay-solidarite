@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 export default function AnnonceCard({ annonce }) {
     return (
         <div className="annonce-card">
-            {/* {console.log(annonce)} */}
             <section className="conteneur-card">
                 <h1 className="category">{annonce.id_category.category_name}</h1>
                 <h1 className="annonce-title">{annonce.title}</h1>

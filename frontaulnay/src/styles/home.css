@@ -37,6 +37,14 @@
     background-color: var(--bluecolor)
 }
 
+.image-tulipe {
+    max-width: 30%;
+    max-height: 30%;
+    margin: 30px auto;
+    border-radius: 10px;
+    border: 1px solid var(--redcolor);
+}
+
 
 
 /* Version PC */
@@ -44,9 +52,11 @@
     .home {
         padding-top: 124px;
     }
-    .buttons-main{
+
+    .buttons-main {
         margin: 10px 10px;
     }
+
     .button-main {
         background-color: var(--redcolor);
         border: none;
@@ -60,18 +70,19 @@
         margin: 10px 10px;
         height: 70px;
     }
-    
+
     .box-choice {
         border: 2px solid var(--graycolor);
         border-radius: 10px;
         background-color: var(--yellowcolor);
         padding: 30px;
-        margin: 30px 10px ;
+        margin: 30px 10px;
         width: 30%;
-      display:inline-block;
+        display: inline-block;
         text-align: center;
-    
+
     }
+
 }
 
 /* Version Tablette */
@@ -79,9 +90,11 @@
     .home {
         padding-top: 124px;
     }
-    .buttons-main{
+
+    .buttons-main {
         margin: 10px 10px;
     }
+
     .button-main {
         background-color: var(--redcolor);
         border: none;
@@ -95,17 +108,17 @@
         margin: 10px 10px;
         height: 70px;
     }
-    
+
     .box-choice {
         border: 2px solid var(--graycolor);
         border-radius: 10px;
         background-color: var(--yellowcolor);
         padding: 30px;
-        margin: 30px 10px ;
+        margin: 30px 10px;
         width: 30%;
-      display:inline-block;
+        display: inline-block;
         text-align: center;
-    
+
     }
 }
 

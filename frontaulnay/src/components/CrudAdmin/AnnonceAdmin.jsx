@@ -15,9 +15,8 @@ export default class AnnonceAdmin extends Component {
     handleDelete = async (id) => {
         await annonceHandler.deleteOne(id);
         const apiRes2 = await annonceHandler.getAll();
-        // console.log(apiRes2);
         this.setState({ anno: apiRes2.data });
-        // window.alert("are you sure")
+        window.alert("etes vous sur")
     }
 
     render() {

@@ -21,6 +21,7 @@
 @import url('./CrudAdmin/editcateg.css');
 @import url('./CrudAdmin/editusers.css');
 @import url('./CrudAdmin/editannonce.css');
+@import url('./CGU.css');
 
 
 
@@ -34,5 +35,9 @@
 
 hr{
     width: 70px;
+}
+
+a{
+    text-decoration: none;
 }
 

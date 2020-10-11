@@ -1,3 +1,24 @@
+.add-categ{
+    text-align: center;
+    background-color: var(--bluecolor);
+    height: 80vh;
+}
+
+.label-addcateg, .input-addcateg{
+    padding: 5px;
+}
+.label-addcateg{
+    margin: 10px auto;
+    
+}
+
+.input-addcateg{
+    margin: 10px auto;
+    width: 80%;
+    border-radius: 10px;
+    border: none;
+
+}
 /* Version PC */
 @media only screen and (min-width : 1025px) {
     .add-categ {

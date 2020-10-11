@@ -8,9 +8,7 @@ export default class EditUsers extends Component {
         user: {}
     }
     async componentDidMount() {
-        // console.log(this.props.match.params.id);
         const apiRes = await userHandler.getById(this.props.match.params.id);
-        console.log(apiRes);
         this.setState(apiRes.data);
     }
     handleChange = (evt) => {
@@ -18,44 +16,44 @@ export default class EditUsers extends Component {
     };
     handleSubmit = async (evt) => {
         evt.preventDefault();
-        const apiRes = await userHandler.updateOne(this.state._id, this.state)
-        console.log(apiRes);
-        console.log(this.state._id);
+        await userHandler.updateOne(this.state._id, this.state)
     };
 
     render() {
 
         const user = this.state
-        console.log(user)
 
         return (
             <div className="edit-users">
-                <h1>Modifier user</h1>
-                <form onSubmit={this.handleSubmit}
-                    onChange={this.handleChange}
-                >
-                    <h3>Nom de l'user : {user.first_name} {user.last_name} </h3>
-                    <input
-                        className="input"
-                        type="text"
-                        name="first_name"
-                        defaultValue={user.first_name}
-                    />
-                    <input
-                        className="input"
-                        type="text"
-                        name="last_name"
-                        defaultValue={user.last_name}
-                    />
-                    <input
-                        className="input"
-                        type="text"
-                        name="email"
-                        defaultValue={user.email}
-                    />
-                    <button className="btn">update infos</button>
+                <h1>Modifier utilisateur</h1>
+                <div className="bloc-connect">
+                    <form onSubmit={this.handleSubmit}
+                        onChange={this.handleChange}
+                    >
+                        <label className="label-addcateg">Prénom de l'utilisateur : </label>
+                        <input
+                            className="input-addcateg"
+                            type="text"
+                            name="first_name"
+                            defaultValue={user.first_name}
+                        /><br />
+                        <label className="label-addcateg">Nom de l'utilisateur : </label>
+                        <input
+                            className="input-addcateg" type="text"
+                            name="last_name"
+                            defaultValue={user.last_name}
+                        /><br />
+                        <label className="label-addcateg">Mail de l'utilisateur : </label>
+                        <br />
+                        <input
+                            className="input-addcateg" type="text"
+                            name="email"
+                            defaultValue={user.email}
+                        /><br />
+                        <button className="btn-editannonce">Modifier</button>
 
-                </form>
+                    </form>
+                </div>
 
 
 

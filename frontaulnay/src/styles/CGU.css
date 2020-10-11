@@ -1,0 +1,15 @@
+.cgu{
+   padding-top: 124px;
+   padding-bottom: 30px;
+   background-color: var(--bluecolor)
+}
+
+.cgu-container > h1 {
+  margin: 30px;
+  color: var(--yellowcolor);
+}
+
+.cgu-container{
+    width: 80%;
+    margin: auto
+}

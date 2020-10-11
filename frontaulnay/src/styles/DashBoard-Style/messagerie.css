@@ -1,3 +1,44 @@
+.messagerie {
+    background-color: var(--bluecolor);
+    height: 90vh;
+}
+
+.messagerie > h1 {
+    text-align: center;
+    color: var(--yellowcolor)
+}
+
+.message-container{
+    background-color: var(--redcolor);
+    border: 1px solid var(--yellowcolor);
+    width: 80%;
+    height: 30%;
+    margin: 10px auto;
+}
+
+.show-message{
+    background-color: var(--yellowcolor);
+    border: 1px solid var(--redcolor);
+    width: 80%;
+    margin: 30px auto;
+    border-radius: 10px;
+    padding: 5px;
+    text-align: center
+}
+.label-message{
+    margin: 30px auto;
+    color: var(--yellowcolor);
+}
+.input-message{
+    margin: 30px auto;
+    color: var(--yellowcolor);
+    width:80%;
+    height: 60px;
+    border-radius: 10px;
+    border:none;
+    padding: 5px
+}
+
 /* Version PC */
 @media only screen and (min-width : 1025px) {
     .messagerie {

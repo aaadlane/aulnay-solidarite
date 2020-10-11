@@ -2,7 +2,7 @@ import React from 'react';
 //import {Link} from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faRecycle, faHammer, faPuzzlePiece } from "@fortawesome/free-solid-svg-icons";
-
+import mainmerci from "./../../styles/images/mainmerci.jpg"
 
 export default function About() {
     return (
@@ -10,6 +10,7 @@ export default function About() {
             <div className="first-section">
                 <h1 className="firsth1">L'ENGAGEMENT CITOYEN AU CŒUR DE L'ACTION DES COLLECTIVITÉS</h1>
             </div>
+            <img src={mainmerci} alt="mainmerci" className="image-about-mainmerci"/>
             <div className="second-section">
                 <h1 className="secondh1">CRÉER DES PONTS ET DU LIEN ENTRE LES ACTEURS</h1>
                 <hr className="ptihr" />

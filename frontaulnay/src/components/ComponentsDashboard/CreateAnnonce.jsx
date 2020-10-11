@@ -31,7 +31,7 @@ export default class CreateAnnonce extends Component {
             active
         });
 
-        this.props.history.push("/annonce");
+        this.props.history.push("/annonces");
     };
 
     async componentDidMount() {

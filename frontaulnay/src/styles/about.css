@@ -13,12 +13,22 @@
     background-color: var(--yellowcolor);
 }
 
+.image-about-mainmerci {
+    display: flex;
+    max-width: 30%;
+    margin: 30px auto;
+    justify-content: center;
+    border: 1px solid var(--redcolor);
+
+
+}
 
 /* Version PC */
 @media only screen and (min-width : 1025px) {
     .about {
         padding-top: 124px;
     }
+
     .about {
         padding-top: 124px;
     }
@@ -36,6 +46,9 @@
         text-align: center;
         padding: 30px;
         color: var(--redcolor);
+        width: 80%;
+        margin: auto;
+        border-radius: 10px;
     }
 
     .ptihr {
@@ -95,21 +108,23 @@
 
     .fourth-section {
         background-color: var(--graycolor);
+        width: 80%;
+        margin: auto;
+        border-radius: 10px;
     }
 
     .text-section-four {
-        padding-top: 30px;
+        padding: 30px;
         color: var(--bluecolor);
     }
 
     .text-section-four>ul {
         text-align: left;
-        padding-top:15px
+        padding-top: 15px
     }
 
     .text-section-four>ul>li:before {
-        content:"• ";
-        padding-left:10px
+        padding-left: 10px
     }
 }
 
@@ -118,6 +133,7 @@
     .about {
         padding-top: 124px;
     }
+
     .about {
         padding-top: 124px;
     }
@@ -203,12 +219,12 @@
 
     .text-section-four>ul {
         text-align: left;
-        padding-top:15px
+        padding-top: 15px
     }
 
     .text-section-four>ul>li:before {
-        content:"• ";
-        padding-left:10px
+        content: "• ";
+        padding-left: 10px
     }
 }
 
@@ -300,12 +316,12 @@
 
     .text-section-four>ul {
         text-align: left;
-        padding-top:15px
+        padding-top: 15px
     }
 
     .text-section-four>ul>li:before {
-        content:"• ";
-        padding-left:10px
+        content: "• ";
+        padding-left: 10px
     }
 
 }

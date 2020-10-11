@@ -56,12 +56,6 @@ export default class SignUp extends Component {
             this.props.history.push("/signin"); // redirection vers la page de signin
         });
     };
-    // ma version
-    // handleSubmit = async (evt) => {
-    //     evt.preventDefault();
-    //     const apiRes = await apiHandler.createOne(this.state);
-    //     console.log(apiRes);
-    // };
 
 
     render() {

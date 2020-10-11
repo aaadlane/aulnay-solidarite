@@ -10,29 +10,31 @@ export default class AddCateg extends Component {
     
     handleSubmit = async (evt) => {
         evt.preventDefault();
-        const apiRes = await apiHandler.createOne(this.state);
-        console.log(apiRes);
+        await apiHandler.createOne(this.state);
+        this.props.history.push("/annonces");
+
     };
 
     render() {
         return (
             <div className="add-categ">
-                <h1> create category</h1>
+                <h1 className="annonce-main-title"> Créer une catégorie</h1>
 
-                <form
-                    className="form-create-product"
+              <div className="bloc-connect">
+              <form
                     onChange={this.handleChange}
                     onSubmit={this.handleSubmit}
                 >
                     <br />
-                    <label htmlFor="category_name" className="label"></label>
-                    <input type="text" name="category_name" className="input" placeholder="Nom de la catégorie" />
+                    <label htmlFor="category_name" className="label-addcateg">Nom de la catégorie à créer : </label>
+                    <input type="text" name="category_name" className="input-addcateg" placeholder="Nom de la catégorie" />
                     <br />
-                    <label htmlFor="picture" className="label"></label>
-                    <input type="text" name="picture" className="input" placeholder="Insérez un lien de l'image représentant la catégorie" />
+                    <label htmlFor="picture" className="label-addcateg">Choisissez l'image de la catégorie : </label>
+                    <input type="text" name="picture" className="input-addcateg" placeholder="Insérez le lien de l'image." />
                     <br/>
-                    <button className="btn">create !!!</button>
+                    <button className="btn-editannonce">Créer</button>
                 </form>
+              </div>
             </div>
         )
     }

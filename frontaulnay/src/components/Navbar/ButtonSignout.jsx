@@ -1,6 +1,4 @@
 import React, { useContext } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserSlash } from "@fortawesome/free-solid-svg-icons";
 import AuthContext from "./../auth/AuthContext";
 
 export default function ButtonSignout() {
@@ -12,11 +10,6 @@ export default function ButtonSignout() {
   };
 
   return (
-    <FontAwesomeIcon
-      size="1x"
-      className="is-clickable link icon signout"
-      icon={faUserSlash}
-      onClick={handleSignout}
-    />
+    <li onClick={handleSignout}>Se déconnecter</li>
   );
 }
