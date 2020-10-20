@@ -43,6 +43,7 @@ app.use(
 
 app.get("/", (req, res) => res.send(`"hello :) my api is working on port${process.env.PORT}"`));
 
+app.get("/", (req, res) => res.send("hello my api is working"));
 app.use("/user", require("./routes/user"));
 app.use("/annonce", require("./routes/annonce"));
 app.use("/associations", require("./routes/associations.js"));

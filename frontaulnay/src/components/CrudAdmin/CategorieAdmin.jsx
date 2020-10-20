@@ -39,7 +39,7 @@ export default class CategorieAdmin extends Component {
                                 <th className="table-head">Supprimer </th>
                             </tr>
                         </thead>
-                        <tbody><tr className="table-row">
+                        <tbody><tr  key={i} className="table-row">
                             <td className="table-div" > {cat.category_name}  </td>
                             <td className="table-div"> <button className="button muted-button"><Link to={`/editcateg/${cat._id}`}>Modifier</Link> </button> </td>
                             <td className="table-div"> <button className="button muted-button" onClick={() => this.handleDelete(cat._id)}>Supprimer</button> </td>

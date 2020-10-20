@@ -18,6 +18,12 @@
     background-color: var(--yellowcolor);
     padding-top: 30px;
     padding-bottom: 30px;
+    border-top: 1px solid var(--yellowcolor)
+
+    /* clip-path: polygon(0% 5%, 0% 100%, 100% 100%, 100% 0%, 84% 5%, 66% 7%, 51% 6%, 33% 5%, 16% 4%); */
+}
+.svg-path{
+
 }
 
 .block-one-texte h2 {
@@ -27,7 +33,7 @@
 
 .h1-main {
     color: var(--redcolor);
-    padding: 30px;
+ 
     text-align: center;
     text-decoration: underline;
     font-weight: bold;
@@ -115,10 +121,14 @@
         background-color: var(--yellowcolor);
         padding: 30px;
         margin: 30px 10px;
-        width: 30%;
-        display: inline-block;
+        min-width: 30%;
+        display: flex;
         text-align: center;
+        align-items: center;
 
+    }
+    .box-choice:nth-child(2){
+        flex-direction: flex-start;
     }
 }
 

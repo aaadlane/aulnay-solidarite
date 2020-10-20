@@ -26,31 +26,56 @@ export default class UsersAdmin extends Component {
         return (
             <div className="users-admin">
                 <h1>Users Admin</h1>
-
-                {users.map((user, i) => {
-                    return <table className="product-manage-table">
-                        <thead>
-                            <tr className="table-row">
-                                <th className="table-head">Prenom</th>
-                                <th className="table-head">Nom</th>
-                                <th className="table-head">E-mail</th>
-                                <th className="table-head">Type de profil</th>
-                                <th className="table-head">Modifier</th>
-                                <th className="table-head">Supprimer </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr key={i} className="table-row">
-                                <td className="table-div" > {user.first_name}  </td>
-                                <td className="table-div"> {user.last_name}  </td>
+                <table>
+                    <thead>
+                        <tr className="table-row">
+                            <th className="table-head">E-mail</th>
+                            <th className="table-head">Modifier</th>
+                            <th className="table-head">Supprimer </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {users.map((user, i) => {
+                    return <tr key={i} className="table-row">
                                 <td className="table-div"> {user.email}  </td>
-                                <td className="table-div"> {user.Profile_type}  </td>
                                 <td className="table-div"> <Link to={`/edituser/${user._id}`}><button className="muted-button">Modifier</button></Link>  </td>
                                 <td className="table-div"> <button className="muted-button" onClick={() => this.handleDelete(user._id)}>Supprimer</button> </td>
                             </tr>
-                        </tbody>
-                    </table>
-                })}
+
+
+
+
+                            // // <table className="product-manage-table">
+                            // //     <thead>
+                            // //         <tr className="table-row">
+                            // //             <th className="table-head">Prenom</th>
+                            // //             <th className="table-head">Nom</th>
+                            // //             <th className="table-head">E-mail</th>
+                            // //             <th className="table-head">Type de profil</th>
+                            // //             <th className="table-head">Modifier</th>
+                            // //             <th className="table-head">Supprimer </th>
+                            // //         </tr>
+                            // //     </thead>
+
+
+
+
+
+                            //     <tbody>
+                            //         <tr key={i} className="table-row">
+                            //             <td className="table-div" > {user.first_name}  </td>
+                            //             <td className="table-div"> {user.last_name}  </td>
+                            //             <td className="table-div"> {user.email}  </td>
+                            //             <td className="table-div"> {user.Profile_type}  </td>
+                            //             <td className="table-div"> <Link to={`/edituser/${user._id}`}><button className="muted-button">Modifier</button></Link>  </td>
+                            //             <td className="table-div"> <button className="muted-button" onClick={() => this.handleDelete(user._id)}>Supprimer</button> </td>
+                            //         </tr>
+                            //     </tbody>
+                            // </table>
+                        })}
+                    </tbody>
+
+                </table>
 
             </div>
         )
